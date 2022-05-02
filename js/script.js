@@ -16,13 +16,13 @@
 const getDaysArray = (year, month) => {
     const monthIndex = month - 1;
     const names = [
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
+    'SUN',
+    'MON',
+    'TUE',
+    'WED',
+    'THU',
+    'FRI',
+    'SAT',
     ];
     const date = new Date(year, monthIndex, 1);
     const result = [];

@@ -101,22 +101,50 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin: 15px 0 15px 0;
+    margin: 30px 0 15px 0;
     background-color: var(--background);
     border-radius: 10px;
-    font-size: 10px;
+    font-size: 15px;
     font-weight: bold;
     text-decoration: none;
 }
 
 .days{
-    border:2px solid var(--second-color);
+    background-color: var(--active);
+    color: var(--background);
     border-radius: 10px;
     text-align: center;
     width: 10vw;
     padding: 10px 2px 10px 2px;
     font-size: auto;
-    overflow:hidden;
+    overflow: hidden;
+}
+
+/* Calendar Days */
+
+.month-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 15px 0;
+    background-color: var(--background);
+    border-radius: 10px;
+    font-size: 10px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.month-day-view {
+    border: 1px solid var(--second-color);
+    border-radius: 10px;
+    background-color: var(--background);
+    border-radius: 10px;
+    font-size: 10px;
+    text-align: center;
+    margin:5px;
 }
 
 /* Footer */
@@ -124,6 +152,7 @@ body {
 .footer{
     display: flex;
     justify-content:space-evenly;
+    border-top: 2px solid var(--main-color);
 }
 
 .footer-content{
@@ -133,3 +162,12 @@ body {
     text-align: center;
 }
 
+/* ============================================== */
+
+.day-modal{
+    display:none;
+}
+
+.new-event-modal{
+    display:none;
+}
