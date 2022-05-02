@@ -19,19 +19,19 @@
             <div>
                 <button id="preview-month" class="preview-month"><</button>
                 <select name="year" id="year" class="select-year">
-                    <option value="select-year">Select year</option>
+                    <option value="select-year">2022</option>
                 </select>
                 <button id="next-month" class="next-month">></button>
             </div>
         </header>
         <section id="week-days" class="week-days">
-            <div class="monday">Monday</div>
-            <div class="tuesday">Tuesday</div>
-            <div class="wednesday">Wednesday</div>
-            <div class="thursday">Thursday</div>
-            <div class="friday">Friday</div>
-            <div class="saturday">Saturday</div>
-            <div class="sunday">Sunday</div>
+            <div id="monday" class="days" >Monday</div>
+            <div id="tuesday" class="days">Tuesday</div>
+            <div id="wednesday" class="days">Wednesday</div>
+            <div id="thursday" class="days">Thursday</div>
+            <div id="friday" class="days">Friday</div>
+            <div id="saturday" class="days">Saturday</div>
+            <div id="sunday" class="days">Sunday</div>
         </section>
         <section id="calendar" class="calendar">
         </section>
@@ -60,9 +60,11 @@
             </div>
         </section>
         <footer class="footer">
-            <div id="following-month" class="following-month"></div>
-            <div></div>
-            <div id="last-month" class="last-month"></div>
+            <div id="last-month" class="last-month footer-content"></div>
+            <div id="motivacional" class="motivacional footer-content">
+                <p>“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” <b>– Martin Fowler</b></p>
+            </div>
+            <div id="following-month" class="following-month  footer-content"></div>
         </footer>
     </div>
 

@@ -35,15 +35,8 @@ body {
 
 }
 
-.week-days {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-
 /* Header buttons */
+
 .next-month {
     background-color: var(--background);
     border: 2px solid #fffdfd;
@@ -101,3 +94,42 @@ body {
     position: relative;
     top: 1px;
 }
+
+/* Week days */
+
+.week-days {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 15px 0;
+    background-color: var(--background);
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.days{
+    border:2px solid var(--second-color);
+    border-radius: 10px;
+    text-align: center;
+    width: 10vw;
+    padding: 10px 2px 10px 2px;
+    font-size: auto;
+    overflow:hidden;
+}
+
+/* Footer */
+
+.footer{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.footer-content{
+    padding-top: 15px;
+    width: 30vw;
+    height: 15vh;
+    text-align: center;
+}
+
