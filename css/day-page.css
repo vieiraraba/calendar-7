@@ -1,0 +1,106 @@
+body {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    background-color: var(--second-color);
+}
+
+/* Color Palette */
+:root{
+    --main-color: #e66b6b;
+    --second-color:#B7B6C2;
+    --background: #fffafa;
+    --text-color:#000;
+    --active:#053C5E;
+}
+
+/* Day modal */
+
+.day-header {
+    padding: 10px;
+    background-color: var(--main-color);
+    color: var(--background);
+    font-size: 8vw;
+    align-items: center;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-around;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.container {
+    width: 770px;
+    background-color: var(--background);
+    border-radius: 15px;
+}
+
+/* New Events */
+
+.new-event {
+    background-color: var(--background);
+    border: 2px solid #fffdfd;
+    border-radius: 50px;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.5vw;
+    font-weight: bold;
+    height: 40px;
+    width: 40px;
+    padding: 2px 7px;
+    text-decoration: none;
+}
+
+.new-event:hover {
+    border-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.new-event:active {
+    position: relative;
+    top: 1px;
+}
+
+/* Back Button */
+
+.back-btn {
+    background-color: var(--background);
+    border: 2px solid #fffdfd;
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    font-size: 2vw;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 7px;
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    border-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.back-btn:active {
+    position: relative;
+    top: 1px;
+}
+
+/* ============== */
+
+.header{
+    display:none;
+}
+
+.week-days{
+    display:none;
+}
+
+.new-event-modal{
+    display:none;
+}
+
+.footer{
+    display:none;
+}
