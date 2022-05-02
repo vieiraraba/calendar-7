@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
-
-    <link rel="event-modular" href="event-modular.css">
+    <script src="/calendar-7/js/script.js" defer></script>
+    <link rel="stylesheet" href="/calendar-7/css/style.css">
 </head>
 
 <body>
@@ -15,34 +15,38 @@
     <div class="container">
         <header class="header" id="header">
             <div id="month-display" class="month-display"></div>
+            MAY
             <div>
-                <button id="next-month" class="next-month">Next Month</button>
-                <select name="year" id="year">
-                    <option value="select-year">Select year</option>
+                <button id="preview-month" class="preview-month"><</button>
+                <select name="year" id="year" class="select-year">
+                    <option value="select-year">2022</option>
                 </select>
-                <button id="preview-month" class="preview-month">Preview Month</button>
+                <button id="next-month" class="next-month">></button>
             </div>
         </header>
 
         <section id="week-days" class="week-days">
-            <div class="monday">Monday</div>
-            <div class="tuesday">Tuesday</div>
-            <div class="wednesday">Wednesday</div>
-            <div class="thursday">Thursday</div>
-            <div class="friday">Friday</div>
-            <div class="saturday">Saturday</div>
-            <div class="sunday">Sunday</div>
+            <div id="monday" class="days" >Monday</div>
+            <div id="tuesday" class="days">Tuesday</div>
+            <div id="wednesday" class="days">Wednesday</div>
+            <div id="thursday" class="days">Thursday</div>
+            <div id="friday" class="days">Friday</div>
+            <div id="saturday" class="days">Saturday</div>
+            <div id="sunday" class="days">Sunday</div>
         </section>
 
         <section id="calendar" class="calendar">
+            <article class="month-wrapper">
+                <div class="month-day-view"></div>
+            </article>
         </section>
         <section id="day-modal" class="day-modal">
             <header id="day-header" class="day-header">
-                <button id="back-btn" class="back-btn">Back to calendar</button>
-                <div id="day-schedule" class="day-schedule"></div>
-                <!--Div para las horas?? -->
-                <button id="new-event" class="new-event">New Event</button>
+                <button id="back-btn" class="back-btn"><</button>
+                <div id="day-schedule" class="day-schedule">10 May</div>
+                <button id="new-event" class="new-event">+</button>
             </header>
+            <div id="hours" class="hours"></div>
         </section>
 
         <section id="new-event-modal" class="new-event-modal">
@@ -63,9 +67,11 @@
         </section>
 
         <footer class="footer">
-            <div id="following-month" class="following-month"></div>
-            <div></div>
-            <div id="last-month" class="last-month"></div>
+            <div id="last-month" class="last-month footer-content"></div>
+            <div id="motivacional" class="motivacional footer-content">
+                <p>“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.” <b>– Martin Fowler</b></p>
+            </div>
+            <div id="following-month" class="following-month  footer-content"></div>
         </footer>
     </div>
 
