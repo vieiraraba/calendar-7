@@ -29,14 +29,14 @@ body {
     margin-bottom: 0;
     padding: 0 1.33em;
     z-index: 1000;
-    border: solid rgba(200, 200, 200, 0.75) 2px;
+    border: solid 2px var(--active);
     border-radius: 10px;
-    color: black;
-    background: #FFF;
+    background: var(--background);
 }
 
 #calendar-popup * {
     display: block;
+    border-radius: 5px;
 }
 
 #calendar-popup header {
@@ -58,7 +58,14 @@ body {
 
 #calendar-popup input {
     margin-bottom: 0.5em;
-    padding: 0;
+    padding: 1px;
+    border: 1px solid var(--second-color);
+    background-color: var(--background);
+}
+
+#calendar-popup input:hover{
+    background-color: var(--second-color);
+    color: var(--background);
 }
 
 #calendar-popup time {
@@ -81,7 +88,7 @@ body {
 
 #calendar-popup li.details {
     font-size: 0.85em;
-    color: #333;
+    color: var(--second-color);
 }
 
 #calendar-popup div.prong {
@@ -93,24 +100,13 @@ body {
     width: 20px;
 }
 
-#calendar-popup div.prong div.bottom-prong-dk {
-    position: relative;
-    top: 0;
-    left: 0;
-
-    border: 10px solid;
-    border-color: rgba(200, 200, 200, 0.75) transparent;
-    border-bottom: 0;
-}
-
 #calendar-popup div.prong div.bottom-prong-lt {
     position: relative;
     top: -10px;
     left: 2px;
     width: 0;
-
     border: 8px solid;
-    border-color: white transparent;
+    border-color: var(--background);
     border-bottom: 0;
 }
 
@@ -118,9 +114,8 @@ body {
     position: relative;
     top: 2px;
     left: 0;
-
     border: 10px solid;
-    border-color: rgba(200, 200, 200, 0.75) transparent;
+    border-color: var(--second-color);
     border-top: 0;
 }
 
@@ -130,7 +125,7 @@ body {
     left: 2px;
     width: 0;
     border: 8px solid;
-    border-color: white transparent;
+    border-color: var(--background);
     border-top: 0;
 }
 
