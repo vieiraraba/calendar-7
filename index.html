@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
     <script src="/calendar-7/js/script.js" defer></script>
-    <link rel="stylesheet" href="/calendar-7/css/style.css">
+    <link rel="stylesheet" href="/calendar-7/css/event-modular.css">
 </head>
 
 <body>
@@ -50,19 +50,60 @@
         </section>
 
         <section id="new-event-modal" class="new-event-modal">
-            <input class="event-title" placeholder="Event Title">
-            <div id="ubication" class="ubication"></div>
-            <div id="all-day-checkbox" class="all-day-checkbox">
-                <input type="checkbox">
-            </div>
-            <div class="start-date"></div>
-            <div class="finish-date"></div>
-            <div class="type-event"></div>
-            <div class="save-event-modal">
-                <button class="save-button">Save Event</button>
-            </div>
-            <div class="delete-event-modal">
-                <button class="delete-button">Delete Event</button>
+            <div id="calendar-popup">
+                <form id="event-form">
+                    <ul>
+                        <li>
+                            <label for="event-start">From</label>
+                            <input id="event-start" type="datetime-local" name="start"/>
+                        </li>
+                        <li>
+                            <label for="event-end">To</label>
+                            <input id="event-end" type="datetime-local" name="end"/>
+                        </li>
+                        <li>
+                            <label for="event-title">Event Name</label>
+                            <input id="event-title" type="text" name="title"/>
+                        </li>
+                        <li>
+                            <label for="event-location">Location</label>
+                            <input id="event-location" type="text" name="location"/>
+                        </li>
+                        <li>
+                            <label for="event-details">Details</label>
+                            <textarea id="event-details" name="details"></textarea>
+                        </li>
+                        <div class="button">
+                            <input type="submit"/>
+                        </div>
+                    </ul>
+                </form>
+
+                <div id="event">
+                    <header></header>
+                    <ul>
+                    <li class="start-time">
+                        <p>Start</p>
+                        <time></time>
+                    </li>
+                    <li class="end-time">
+                        <p>End</p>
+                        <time></time>
+                    </li>
+                    <li>
+                        <p>at</p>
+                        <p class="location"></p>
+                    </li>
+                    <li>
+                        <p>Details:</p>
+                        <p class="details"></p>
+                    </li>
+                    </ul>
+                </div>
+                <div class="prong">
+                    <div class="bottom-prong-dk"></div>
+                    <div class="bottom-prong-lt"></div>
+                </div>
             </div>
         </section>
 
