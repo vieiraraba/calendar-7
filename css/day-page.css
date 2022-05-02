@@ -87,6 +87,21 @@ body {
     top: 1px;
 }
 
+/* Hours */
+
+.hours{
+    background-color: var(--background);
+    height: 3vw;
+    width: 770px;
+    cursor: pointer;
+    text-align: left;
+    border-bottom: 2px solid var(--second-color);
+    font-size: 2vw;
+    font-size: 10px;
+    font-weight: bold;
+    vertical-align:center;
+    text-decoration: none;
+}
 /* ============== */
 
 .header{
