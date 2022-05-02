@@ -5,6 +5,8 @@ body {
     background-color: var(--second-color);
 }
 
+@import "/calendar-7/css/day-page.css";
+
 /* Color Palette */
 :root{
     --main-color: #e66b6b;
