@@ -1,11 +1,12 @@
+@import "/css/day-page.css";
+@import "/css/event-modular.css";
+
 body {
     display: flex;
     margin-top: 50px;
     justify-content: center;
     background-color: var(--second-color);
 }
-
-@import "/calendar-7/css/day-page.css";
 
 /* Color Palette */
 :root{
@@ -166,10 +167,43 @@ body {
     font-size: 1.5vh;
 }
 
+
+.hora0{
+    position:absolute;
+    background-color: var(--main-color);
+    color: var(--background);
+    z-index: 500;
+    width: 500px;
+    height: 10px;
+    padding: 5px;
+    margin:10px;
+}
+
+.hora1{
+    position:absolute;
+    background-color: var(--active);
+    color: var(--background);
+    z-index: 1000;
+    width: 500px;
+    height:5px;
+    padding: 5px;
+    margin:10px;
+}
+
+.hora2{
+    position:absolute;
+    background-color: var(--second-color);
+    color: var(--background);
+    z-index: 2000;
+    width: 500px;
+    height:2px;
+    padding: 5px;
+    margin:10px;
+}
 /* ============================================== */
 
 .day-modal{
-    display:none;
+    display:block;
 }
 
 .new-event-modal{

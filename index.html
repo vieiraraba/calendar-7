@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
-    <script src="/calendar-7/js/script.js" defer></script>
-    <link rel="stylesheet" href="/calendar-7/css/event-modular.css">
+    <script defer src="/js/script.js"></script>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
@@ -36,39 +36,42 @@
 
         <section id="calendar" class="calendar">
             <article class="month-wrapper">
-                <div class="month-day-view"></div>
+
             </article>
         </section>
+
         <section id="day-modal" class="day-modal">
             <header id="day-header" class="day-header">
                 <button id="back-btn" class="back-btn"><</button>
                 <div id="day-schedule" class="day-schedule">10 May</div>
                 <button id="new-event" class="new-event">+</button>
             </header>
-            <div id="hour-00" class="hours">0</div>
-            <div id="hours-01" class="hours">1</div>
-            <div id="hours-02" class="hours">2</div>
-            <div id="hours-03" class="hours">3</div>
-            <div id="hours-04" class="hours">4</div>
-            <div id="hours-05" class="hours">5</div>
-            <div id="hours-06" class="hours">6</div>
-            <div id="hours-07" class="hours">7</div>
-            <div id="hours-08" class="hours">8</div>
-            <div id="hours-09" class="hours">9</div>
-            <div id="hours-10" class="hours">10</div>
-            <div id="hours-11" class="hours">11</div>
-            <div id="hours-12" class="hours">12</div>
-            <div id="hours-13" class="hours">13</div>
-            <div id="hours-14" class="hours">14</div>
-            <div id="hours-15" class="hours">15</div>
-            <div id="hours-16" class="hours">16</div>
-            <div id="hours-17" class="hours">17</div>
-            <div id="hours-18" class="hours">18</div>
-            <div id="hours-19" class="hours">19</div>
-            <div id="hours-20" class="hours">20</div>
-            <div id="hours-21" class="hours">21</div>
-            <div id="hours-22" class="hours">22</div>
-            <div id="hours-23" class="hours">23</div>
+            <div class="horas">
+                <div id="hour-00" class="hours">0</div>
+                <div id="hours-01" class="hours">1</div>
+                <div id="hours-02" class="hours">2</div>
+                <div id="hours-03" class="hours">3</div>
+                <div id="hours-04" class="hours">4</div>
+                <div id="hours-05" class="hours">5</div>
+                <div id="hours-06" class="hours">6</div>
+                <div id="hours-07" class="hours">7</div>
+                <div id="hours-08" class="hours">8</div>
+                <div id="hours-09" class="hours">9</div>
+                <div id="hours-10" class="hours">10<div class="hora0">0</div></div>
+                <div id="hours-11" class="hours">11<div class="hora0">0</div><div class="hora1">1</div></div>
+                <div id="hours-12" class="hours">12<div class="hora1">1</div><div class="hora0">0</div><div class="hora2">2</div></div>
+                <div id="hours-13" class="hours">13<div class="hora0">0</div></div>
+                <div id="hours-14" class="hours">14</div>
+                <div id="hours-15" class="hours">15</div>
+                <div id="hours-16" class="hours">16</div>
+                <div id="hours-17" class="hours">17</div>
+                <div id="hours-18" class="hours">18</div>
+                <div id="hours-19" class="hours">19</div>
+                <div id="hours-20" class="hours">20</div>
+                <div id="hours-21" class="hours">21</div>
+                <div id="hours-22" class="hours">22</div>
+                <div id="hours-23" class="hours">23</div>
+            </div>
         </section>
 
         <section id="new-event-modal" class="new-event-modal">
@@ -95,7 +98,7 @@
                             <label for="event-details">Details</label>
                             <textarea id="event-details" name="details"></textarea>
                         </li>
-                        <div class="button">
+                        <div class="button" id="save-btn">
                             <input type="submit"/>
                         </div>
                     </ul>
