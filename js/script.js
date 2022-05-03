@@ -1,3 +1,6 @@
+import getCurrentDay from '../js/events.js';
+import addUserEvent from './modal.js';
+
 const weekdaysIndexes = {
   Monday: 0,
   Tuesday: 1,
@@ -8,43 +11,13 @@ const weekdaysIndexes = {
   Sunday: 6,
 };
 
-const userEventsArray = [];
+const handleDayViewEvents = () => {};
 
 const dateObj = new Date();
 const day = dateObj.getDay();
 const month = dateObj.getMonth();
 const year = dateObj.getFullYear();
-const formInputs = document.querySelectorAll('#event-form input');
 
-const openEventModal = (e) => {
-  console.log(e.currentTarget);
-};
-const addUserEvent = (e) => {
-  e.preventDefault();
-
-  const userEvent = {
-    startEvent: formInputs[0].value,
-    startDay: formInputs[0].value.split('T')[0].split('-')[2],
-    startMonth: formInputs[0].value.split('T')[0].split('-')[1],
-    startYear: formInputs[0].value.split('T')[0].split('-')[0],
-    startHour: formInputs[0].value.split('T').pop().split(':')[0],
-    startMinute: formInputs[0].value.split('T').pop().split(':')[1],
-    endEvent: formInputs[1].value,
-    endDay: formInputs[1].value.split('T')[0].split('-')[2],
-    endMonth: formInputs[1].value.split('T')[0].split('-')[1],
-    endYear: formInputs[1].value.split('T')[0].split('-')[0],
-    endHour: formInputs[1].value.split('T').pop().split(':')[0],
-    endMinute: formInputs[1].value.split('T').pop().split(':')[1],
-    title: formInputs[2].value,
-    location: formInputs[3].value,
-  };
-  if (!userEvent.startEven && !userEvent.endEvent) {
-    console.log('please enter a valid date');
-    return;
-  } else {
-    userEventsArray.push(userEvent);
-  }
-};
 
 const onLoad = () => {
   const sumDaysOfCurrentMonth = new Date(year, month + 1, 0).getDate();
@@ -72,7 +45,7 @@ const onLoad = () => {
       pEl.textContent = i - firstDayindex;
       dayEl.appendChild(pEl);
       dayEl.id = i - firstDayindex;
-      dayEl.addEventListener('click', openEventModal);
+      dayEl.addEventListener('click', getCurrentDay);
     }
   }
 };
