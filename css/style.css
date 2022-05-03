@@ -167,51 +167,28 @@ body {
     font-size: 1.5vh;
 }
 
-
-.hora0{
-    position:absolute;
-    background-color: var(--main-color);
-    border-radius: 10px;
-    color: var(--background);
-    text-align: left;
-    z-index: 500;
-    width: 50vh;
-    height: 0.4vh;
-    padding: 5px;
-}
-
-.hora1{
-    position:absolute;
-    background-color: var(--active);
-    border-radius: 10px;
-    color: var(--background);
-    z-index: 1000;
-    width: 45vh;
-    height:0.2vh;
-    padding: 5px;
-}
-
-.hora2{
-    position:absolute;
-    background-color: var(--second-color);
-    border-radius: 10px;
-    color: var(--background);
-    z-index: 2000;
-    width: 40vh;
-    height:0.5vh;
-    padding: 5px;
-}
 /* ============================================== */
 
-.day-modal{
+.header{
     display:none;
+}
+
+.week-days{
+    display:none;
+}
+
+.calendar{
+    display:none;
+}
+
+.day-modal{
+    display:block;
 }
 
 .new-event-modal{
     display:block;
 }
 
-
-.calendar{
+.footer{
     display:none;
 }
