@@ -92,7 +92,7 @@ body {
 .hours{
     background-color: var(--background);
     height: 3vw;
-    width: 770px;
+    width: 100%;
     cursor: pointer;
     text-align: left;
     border-bottom: 2px solid var(--second-color);
@@ -117,5 +117,9 @@ body {
 }
 
 .footer{
+    display:none;
+}
+
+.calendar{
     display:none;
 }
