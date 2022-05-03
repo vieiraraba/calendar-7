@@ -23,12 +23,27 @@ const addUserEvent = (e) => {
   e.preventDefault();
 
   const userEvent = {
-    start: formInputs[0].value,
-    end: formInputs[1].value,
+    startEvent: formInputs[0].value,
+    startDay: formInputs[0].value.split('T')[0].split('-')[2],
+    startMonth: formInputs[0].value.split('T')[0].split('-')[1],
+    startYear: formInputs[0].value.split('T')[0].split('-')[0],
+    startHour: formInputs[0].value.split('T').pop().split(':')[0],
+    startMinute: formInputs[0].value.split('T').pop().split(':')[1],
+    endEvent: formInputs[1].value,
+    endDay: formInputs[1].value.split('T')[0].split('-')[2],
+    endMonth: formInputs[1].value.split('T')[0].split('-')[1],
+    endYear: formInputs[1].value.split('T')[0].split('-')[0],
+    endHour: formInputs[1].value.split('T').pop().split(':')[0],
+    endMinute: formInputs[1].value.split('T').pop().split(':')[1],
     title: formInputs[2].value,
     location: formInputs[3].value,
   };
-  userEventsArray.push(userEvent);
+  if (!userEvent.startEven && !userEvent.endEvent) {
+    console.log('please enter a valid date');
+    return;
+  } else {
+    userEventsArray.push(userEvent);
+  }
 };
 
 const onLoad = () => {
@@ -66,4 +81,3 @@ onLoad();
 
 // event listeners
 document.getElementById('save-btn').addEventListener('click', addUserEvent);
-    
