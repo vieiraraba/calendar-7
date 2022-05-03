@@ -207,5 +207,10 @@ body {
 }
 
 .new-event-modal{
+    display:block;
+}
+
+
+.calendar{
     display:none;
 }

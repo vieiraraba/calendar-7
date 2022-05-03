@@ -40,13 +40,13 @@
             </article>
         </section>
 
-        <section id="day-modal" class="day-modal">
+        <section id="day-modal" class="day-modal" style="display: none;">
             <header id="day-header" class="day-header">
                 <button id="back-btn" class="back-btn"><</button>
                 <div id="day-schedule" class="day-schedule">10 May</div>
                 <button id="new-event" class="new-event">+</button>
             </header>
-            <div class="horas">
+            <div class="horas" >
                 <div id="hour-00" class="hours">0</div>
                 <div id="hours-01" class="hours">1</div>
                 <div id="hours-02" class="hours">2</div>
@@ -98,33 +98,13 @@
                             <label for="event-details">Details</label>
                             <textarea id="event-details" name="details"></textarea>
                         </li>
-                        <div class="button" id="save-btn">
-                            <input type="submit"/>
+                        <div class="modal-btns">
+                            <button type="submit" id="save-btn">Save event</button>
+                            <button id="cancle-btn">Quit without saving</button>
                         </div>
                     </ul>
                 </form>
 
-                <div id="event">
-                    <header></header>
-                    <ul>
-                    <li class="start-time">
-                        <p>Start</p>
-                        <time></time>
-                    </li>
-                    <li class="end-time">
-                        <p>End</p>
-                        <time></time>
-                    </li>
-                    <li>
-                        <p>at</p>
-                        <p class="location"></p>
-                    </li>
-                    <li>
-                        <p>Details:</p>
-                        <p class="details"></p>
-                    </li>
-                    </ul>
-                </div>
                 <div class="prong">
                     <div class="bottom-prong-dk"></div>
                     <div class="bottom-prong-lt"></div>
