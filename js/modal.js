@@ -2,7 +2,9 @@ const openModalButtons = document.querySelectorAll('[data-modal-target]');
 const closeModalButtons = document.querySelectorAll('[data-close-button]');
 const overlay = document.getElementById('overlay');
 const formInputs = document.querySelectorAll('#event-form input');
-const dataSaveBtn = document.querySelector('[data-save-button]');
+const dataSaveBtn = document.querySelectorAll('[data-save-button]');
+const inputFields = document.querySelectorAll('#event-form input');
+  const eventDetails = document.getElementById('event-details');
 const userEventsArray = [];
 
 openModalButtons.forEach((button) => {
@@ -26,15 +28,22 @@ closeModalButtons.forEach((button) => {
   });
 });
 
+dataSaveBtn.forEach((button) => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal');
+    dataSave(modal);
+  })
+});
+
 function openModal(modal) {
+  inputFields;
+  eventDetails;
   if (modal == null) return;
   modal.classList.add('active');
   overlay.classList.add('active');
 }
 
 function closeModal(modal) {
-  const inputFields = document.querySelectorAll('#event-form input');
-  const eventDetails = document.getElementById('event-details');
   if (modal == null) return;
   modal.classList.remove('active');
   overlay.classList.remove('active');
@@ -42,13 +51,12 @@ function closeModal(modal) {
   inputFields.forEach((input) => (input.value = ''));
 }
 
-const saveEvent = (e, modal) => {
+function dataSave (modal){
   if (modal == null) return;
   console.log(modal, 'this is modal');
   modal.classList.remove('active');
   overlay.classList.remove('active');
   eventDetails.value = '';
-  inputFields.forEach((input) => (input.value = ''));
 };
 
 const addUserEvent = (e, modal) => {
@@ -75,9 +83,10 @@ const addUserEvent = (e, modal) => {
     return;
   } else {
     userEventsArray.push(userEvent);
+    dataSave();
     console.log(userEventsArray);
   }
 };
-dataSaveBtn.addEventListener('click', saveEvent);
+
 
 export default addUserEvent;
