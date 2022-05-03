@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
     <script defer src="/js/script.js"></script>
+    <script defer src="/js/modal.js"></script>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -44,38 +45,37 @@
             <header id="day-header" class="day-header">
                 <button id="back-btn" class="back-btn"><</button>
                 <div id="day-schedule" class="day-schedule">10 May</div>
-                <button id="new-event" class="new-event">+</button>
+                <button id="new-event" data-modal-target="#modal" class="new-event">+</button>
             </header>
             <div class="horas" >
-                <div id="hour-00" class="hours">0</div>
-                <div id="hours-01" class="hours">1</div>
-                <div id="hours-02" class="hours">2</div>
-                <div id="hours-03" class="hours">3</div>
-                <div id="hours-04" class="hours">4</div>
-                <div id="hours-05" class="hours">5</div>
-                <div id="hours-06" class="hours">6</div>
-                <div id="hours-07" class="hours">7</div>
-                <div id="hours-08" class="hours">8</div>
-                <div id="hours-09" class="hours">9</div>
-                <div id="hours-10" class="hours">10<div class="hora0">0</div></div>
-                <div id="hours-11" class="hours">11<div class="hora0">0</div><div class="hora1">1</div></div>
-                <div id="hours-12" class="hours">12<div class="hora1">1</div><div class="hora0">0</div><div class="hora2">2</div></div>
-                <div id="hours-13" class="hours">13<div class="hora0">0</div></div>
-                <div id="hours-14" class="hours">14</div>
-                <div id="hours-15" class="hours">15</div>
-                <div id="hours-16" class="hours">16</div>
-                <div id="hours-17" class="hours">17</div>
-                <div id="hours-18" class="hours">18</div>
-                <div id="hours-19" class="hours">19</div>
-                <div id="hours-20" class="hours">20</div>
-                <div id="hours-21" class="hours">21</div>
-                <div id="hours-22" class="hours">22</div>
-                <div id="hours-23" class="hours">23</div>
+                <div id="hour-00" class="hours"><div class="hour-title"></div><h4>00:00</h4></div>
+                <div id="hours-01" class="hours"><div class="hour-title"></div><h4>01:00</h4></div>
+                <div id="hours-02" class="hours"><div class="hour-title"></div><h4>02:00</h4></div>
+                <div id="hours-03" class="hours"><div class="hour-title"></div><h4>03:00</h4></div>
+                <div id="hours-04" class="hours"><div class="hour-title"></div><h4>04:00</h4></div>
+                <div id="hours-05" class="hours"><div class="hour-title"></div><h4>05:00</h4></div>
+                <div id="hours-06" class="hours"><div class="hour-title"></div><h4>06:00</h4></div>
+                <div id="hours-07" class="hours"><div class="hour-title"></div><h4>07:00</h4></div>
+                <div id="hours-08" class="hours"><div class="hour-title"></div><h4>08:00</h4></div>
+                <div id="hours-09" class="hours"><div class="hour-title"></div><h4>09:00</h4></div>
+                <div id="hours-10" class="hours"><div class="hour-title"></div><h4>10:00</h4><div class="hora0"></div></div>
+                <div id="hours-11" class="hours"><div class="hour-title"></div><h4>11:00</h4><div class="hora0"></div><div class="hora1"></div></div>
+                <div id="hours-12" class="hours"><div class="hour-title"></div><h4>12:00</h4><div class="hora1"></div><div class="hora0"></div></div>
+                <div id="hours-13" class="hours"><div class="hour-title"></div><h4>13:00</h4><div class="hora0"></div></div>
+                <div id="hours-14" class="hours"><div class="hour-title"></div><h4>14:00</h4></div>
+                <div id="hours-15" class="hours"><div class="hour-title"></div><h4>15:00</h4></div>
+                <div id="hours-16" class="hours"><div class="hour-title"></div><h4>16:00</h4></div>
+                <div id="hours-17" class="hours"><div class="hour-title"></div><h4>17:00</h4></div>
+                <div id="hours-18" class="hours"><div class="hour-title"></div><h4>18:00</h4></div>
+                <div id="hours-19" class="hours"><div class="hour-title"></div><h4>19:00</h4></div>
+                <div id="hours-20" class="hours"><div class="hour-title"></div><h4>20:00</h4></div>
+                <div id="hours-21" class="hours"><div class="hour-title"></div><h4>21:00</h4></div>
+                <div id="hours-22" class="hours"><div class="hour-title"></div><h4>22:00</h4></div>
+                <div id="hours-23" class="hours"><div class="hour-title"></div><h4>23:00</h4></div>
             </div>
         </section>
 
-        <section id="new-event-modal" class="new-event-modal">
-            <div id="calendar-popup">
+        <section id="modal" class="modal">
                 <form id="event-form">
                     <ul>
                         <li>
@@ -99,8 +99,8 @@
                             <textarea id="event-details" name="details"></textarea>
                         </li>
                         <div class="modal-btns">
-                            <button type="submit" id="save-btn">Save event</button>
-                            <button id="cancle-btn">Quit without saving</button>
+                            <button type="submit" id="save-btn">Save Event</button>
+                            <button data-close-button id="cancle-btn">Cancel Event</button>
                         </div>
                     </ul>
                 </form>
@@ -109,8 +109,9 @@
                     <div class="bottom-prong-dk"></div>
                     <div class="bottom-prong-lt"></div>
                 </div>
-            </div>
         </section>
+
+        <div id="overlay"></div>
 
         <footer class="footer">
             <div id="last-month" class="last-month footer-content"></div>

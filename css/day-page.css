@@ -16,6 +16,10 @@ body {
 
 /* Day modal */
 
+.day-modal{
+    z-index: 5;
+}
+
 .day-header {
     padding: 10px;
     background-color: var(--main-color);
@@ -92,15 +96,37 @@ body {
 .hours{
     background-color: var(--background);
     height: 4vw;
-    width: 100%;
-    display:flex;
-    flex-direction: column;
+    width: 95%;
+    margin-left:15px;
+    margin-bottom: 15px;
+    display:block;
     cursor: pointer;
-    text-align: left;
     border-bottom: 2px solid var(--second-color);
     font-size: 3vw;
     font-weight: bold;
-    vertical-align:center;
     text-decoration: none;
 }
+
+.hora0{
+    background-color: var(--main-color);
+    border-radius: 10px;
+    color: var(--background);
+    text-align: left;
+    z-index:0.5;
+    width: 50vh;
+    height: 0.4vh;
+    padding: 5px;
+}
+
+.hora1{
+    background-color: var(--main-color);
+    border-radius: 10px;
+    color: var(--background);
+    text-align: left;
+    z-index:0.5;
+    width: 50vh;
+    height: 0.4vh;
+    padding: 5px;
+}
+
 /* ============== */
