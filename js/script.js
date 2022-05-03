@@ -49,3 +49,4 @@ array.forEach((day) => {
     createMonthLayout(day);
     // console.log(day);
 });
+
