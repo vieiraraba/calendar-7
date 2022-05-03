@@ -171,34 +171,35 @@ body {
 .hora0{
     position:absolute;
     background-color: var(--main-color);
+    border-radius: 10px;
     color: var(--background);
+    text-align: left;
     z-index: 500;
-    width: 500px;
-    height: 10px;
+    width: 50vh;
+    height: 0.4vh;
     padding: 5px;
-    margin:10px;
 }
 
 .hora1{
     position:absolute;
     background-color: var(--active);
+    border-radius: 10px;
     color: var(--background);
     z-index: 1000;
-    width: 500px;
-    height:5px;
+    width: 45vh;
+    height:0.2vh;
     padding: 5px;
-    margin:10px;
 }
 
 .hora2{
     position:absolute;
     background-color: var(--second-color);
+    border-radius: 10px;
     color: var(--background);
     z-index: 2000;
-    width: 500px;
-    height:2px;
+    width: 40vh;
+    height:0.5vh;
     padding: 5px;
-    margin:10px;
 }
 /* ============================================== */
 
