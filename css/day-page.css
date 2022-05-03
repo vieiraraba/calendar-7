@@ -104,23 +104,3 @@ body {
     text-decoration: none;
 }
 /* ============== */
-
-.header{
-    display:none;
-}
-
-.week-days{
-    display:none;
-}
-
-.new-event-modal{
-    display:none;
-}
-
-.footer{
-    display:none;
-}
-
-.calendar{
-    display:none;
-}

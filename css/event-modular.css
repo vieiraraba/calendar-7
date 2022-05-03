@@ -130,23 +130,3 @@ body {
 }
 
 /* ============================================================== */
-
-header {
-    display:none;
-}
-
-.week-days{
-    display:none;
-}
-
-.calendar {
-    display:none;
-}
-
-.day-modal{
-    display:none;
-}
-
-footer {
-    display:none;
-}

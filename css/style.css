@@ -204,7 +204,7 @@ body {
 /* ============================================== */
 
 .day-modal{
-    display:block;
+    display:none;
 }
 
 .new-event-modal{
