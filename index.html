@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendar</title>
-    <script defer src="/js/script.js"></script>
-    <script defer src="/js/modal.js"></script>
+    <script defer src="/js/script.js" type="module" ></script>
+    <script defer src="/js/modal.js" type="module"></script>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
@@ -91,11 +91,11 @@
                     <ul>
                         <li>
                             <label for="event-start">From</label>
-                            <input id="event-start" type="datetime-local" name="start" required/>
+                            <input id="event-start" type="datetime-local" name="start" />
                         </li>
                         <li>
                             <label for="event-end">To</label>
-                            <input id="event-end" type="datetime-local" name="end" required/>
+                            <input id="event-end" type="datetime-local" name="end" />
                         </li>
                         <li>
                             <label for="event-title">Event Name</label>
@@ -110,7 +110,7 @@
                             <textarea id="event-details" name="details"></textarea>
                         </li>
                         <div class="modal-btns">
-                            <button type="submit" id="save-btn">Save Event</button>
+                            <button data-save-button type="submit" id="save-btn"  >Save Event</button>
                             <button data-close-button id="cancle-btn">Cancel Event</button>
                         </div>
                     </ul>
