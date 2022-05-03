@@ -178,11 +178,11 @@ body {
 }
 
 .calendar{
-    display:none;
+    display:flex;
 }
 
 .day-modal{
-    display:block;
+    display:none;
 }
 
 .new-event-modal{
@@ -190,5 +190,5 @@ body {
 }
 
 .footer{
-    display:none;
+    display:flex;
 }
