@@ -19,7 +19,18 @@
             <div>
                 <button id="preview-month" class="preview-month"><</button>
                 <select name="year" id="year" class="select-year">
-                    <option value="select-year">2022</option>
+                    <option value="select-year">JANUARY</option>
+                    <option value="select-year">FEBRUARY</option>
+                    <option value="select-year">MARCH</option>
+                    <option value="select-year">APRIL</option>
+                    <option value="select-year" selected>MAY</option>
+                    <option value="select-year">JUNE</option>
+                    <option value="select-year">JULY</option>
+                    <option value="select-year">AUGUST</option>
+                    <option value="select-year">SEPTEMBER</option>
+                    <option value="select-year">OCTOBER</option>
+                    <option value="select-year">NOVEMBER</option>
+                    <option value="select-year">DECEMBER</option>
                 </select>
                 <button id="next-month" data-modal-target="#modal" class="next-month">+</button>
             </div>
@@ -88,7 +99,7 @@
                         </li>
                         <li>
                             <label for="event-title">Event Name</label>
-                            <input id="event-title" type="text" name="title" required/>
+                            <input id="event-title" type="text" name="title" required maxlength="60"/>
                         </li>
                         <li>
                             <label for="event-location">Location</label>
