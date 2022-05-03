@@ -204,7 +204,7 @@ body {
 /* ============================================== */
 
 .day-modal{
-    display:none;
+    display:block;
 }
 
 .new-event-modal{
@@ -213,5 +213,5 @@ body {
 
 
 .calendar{
-    display:none;
+    display:block;
 }
