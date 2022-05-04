@@ -1,21 +1,5 @@
-body {
-    display: flex;
-    margin-top: 50px;
-    justify-content: center;
-    background-color: var(--second-color);
-}
-
-/* Color Palette */
-:root{
-    --main-color: #e66b6b;
-    --second-color:#B7B6C2;
-    --background: #fffafa;
-    --text-color:#000;
-    --active:#053C5E;
-}
-
 /* Day modal */
-
+/* ----------------------------------------------------------------*/
 .day-modal{
     z-index: 5;
 }
@@ -40,7 +24,7 @@ body {
 }
 
 /* New Events */
-
+/* ----------------------------------------------------------------*/
 .new-event {
     background-color: var(--background);
     border: 2px solid #fffdfd;
@@ -66,7 +50,7 @@ body {
 }
 
 /* Back Button */
-
+/* ----------------------------------------------------------------*/
 .back-btn {
     background-color: var(--background);
     border: 2px solid #fffdfd;
@@ -92,7 +76,7 @@ body {
 }
 
 /* Hours */
-
+/* ----------------------------------------------------------------*/
 .hours{
     background-color: var(--background);
     height: 4vw;
@@ -129,4 +113,4 @@ body {
     padding: 5px;
 }
 
-/* ============== */
+/* ----------------------------------------------------------------*/

@@ -1,5 +1,5 @@
-@import '/css/day-page.css';
-@import '/css/event-modular.css';
+@import './day-page.css';
+@import './event-modular.css';
 
 body {
   display: flex;
@@ -9,17 +9,20 @@ body {
 }
 
 /* Color Palette */
+/* ----------------------------------------------------------------*/
 :root {
   --main-color: #e66b6b;
   --second-color: #b7b6c2;
   --background: #fffafa;
   --text-color: #000;
   --active: #053c5e;
+  --alert-color: #e43333;
 }
 
 /* Header */
+/* ----------------------------------------------------------------*/
 .redColor {
-  color: red;
+  color: var(--alert-color);
 }
 
 .header {
@@ -41,7 +44,7 @@ body {
 }
 
 /* Header buttons */
-
+/* ----------------------------------------------------------------*/
 .next-month {
   background-color: var(--background);
   border: 2px solid #fffdfd;
@@ -101,7 +104,7 @@ body {
 }
 
 /* Week days */
-
+/* ----------------------------------------------------------------*/
 .week-days {
   width: 100%;
   display: flex;
@@ -127,7 +130,7 @@ body {
 }
 
 /* Calendar Days */
-
+/* ----------------------------------------------------------------*/
 .month-wrapper {
   width: 100%;
   display: flex;
@@ -154,7 +157,7 @@ body {
 }
 
 /* Footer */
-
+/* ----------------------------------------------------------------*/
 .footer {
   display: flex;
   justify-content: space-evenly;
@@ -169,8 +172,8 @@ body {
   font-size: 1.5vh;
 }
 
-/* ============================================== */
-
+/* Content Display */
+/* ----------------------------------------------------------------*/
 .day-modal {
   display: block;
 }
@@ -194,3 +197,4 @@ body {
 .footer {
   display: flex;
 }
+/* ----------------------------------------------------------------*/

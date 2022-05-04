@@ -1,6 +1,8 @@
 import getCurrentDay from '../js/events.js';
 import addUserEvent from './modal.js';
 
+// Variables
+// ----------------------------------------------------------------
 const weekdaysIndexes = {
   Monday: 0,
   Tuesday: 1,
@@ -32,7 +34,6 @@ const dateObj = new Date();
 const day = dateObj.getDay();
 let month = dateObj.getMonth();
 const year = dateObj.getFullYear();
-
 const selectMonth = document.getElementById('select-month');
 const monthDisplay = document.getElementById('month-display');;
 
@@ -67,6 +68,8 @@ const onLoad = (month=4) => {
   }
 };
 
+// Functions
+// ----------------------------------------------------------------
 selectMonth.addEventListener('change', function (e) {
   const monthEl = document.querySelector('.month-wrapper');
   monthDisplay.textContent = this.value;
@@ -75,5 +78,5 @@ selectMonth.addEventListener('change', function (e) {
 
 onLoad();
 
-// event listeners
-// document.getElementById('save-btn').addEventListener('click', addUserEvent);
+//event listeners
+//ocument.getElementById('save-btn').addEventListener('click', addUserEvent);

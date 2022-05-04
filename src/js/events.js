@@ -1,3 +1,5 @@
+// Variables
+// ----------------------------------------------------------------
 const returnCalendar = document.getElementById('back-btn');
 const getCurrentDay = (e) => {
   const calendarEl = document.getElementById('calendar');
@@ -18,8 +20,12 @@ const getCurrentDay = (e) => {
   currentDayHeaderEl.textContent = `${dayChosen} ${month}`;
 };
 
+// Event listeners
+// ----------------------------------------------------------------
 returnCalendar.addEventListener ('click', backToCalendar)
 
+// Functions
+// ----------------------------------------------------------------
 function backToCalendar() {
   const calendarEl = document.getElementById('calendar');
   const dayViewEl = document.getElementById('day-modal');

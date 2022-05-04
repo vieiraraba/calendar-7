@@ -5,12 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calendar</title>
-    <script defer src="/js/script.js" type="module"></script>
-    <script defer src="/js/modal.js" type="module"></script>
-    <link rel="stylesheet" href="/css/style.css" />
+    <script defer src="./src/js/main.js" type="module"></script>
+    <script defer src="./src/js/modal.js" type="module"></script>
+    <link rel="stylesheet" href="./src/css/main.css" />
   </head>
+
   <body>
     <div class="container">
+      <!-- Header -->
       <header class="header" id="header">
         <div id="month-display" class="month-display"></div>
         <div>
@@ -35,7 +37,7 @@
           </button>
         </div>
       </header>
-
+      <!-- Week Days Section -->
       <section id="week-days" class="week-days">
         <div id="monday" class="days">Monday</div>
         <div id="tuesday" class="days">Tuesday</div>
@@ -45,11 +47,11 @@
         <div id="saturday" class="days">Saturday</div>
         <div id="sunday" class="days">Sunday</div>
       </section>
-
+      <!-- Month Day Section -->
       <section id="calendar" class="calendar">
         <article class="month-wrapper"></article>
       </section>
-
+      <!-- Modal Day Section -->
       <section id="day-modal" class="day-modal">
         <header id="day-header" class="day-header">
           <button id="back-btn" class="back-btn"><</button>
@@ -162,7 +164,7 @@
           </div>
         </div>
       </section>
-
+      <!-- Event Modal Section (popup) -->
       <section id="modal" class="modal">
         <form id="event-form">
           <ul>
@@ -200,15 +202,10 @@
             </div>
           </ul>
         </form>
-
-        <div class="prong">
-          <div class="bottom-prong-dk"></div>
-          <div class="bottom-prong-lt"></div>
-        </div>
       </section>
-
+      <!-- Overlay (blackout the content) -->
       <div id="overlay"></div>
-
+      <!-- Footer Section -->
       <footer id="footer" class="footer">
         <div id="last-month" class="last-month footer-content"></div>
         <div id="motivacional" class="motivacional footer-content">
