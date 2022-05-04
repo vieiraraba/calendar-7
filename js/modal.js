@@ -63,6 +63,8 @@ function dataSave(modal) {
   modal.classList.remove('active');
   overlay.classList.remove('active');
   eventDetails.value = '';
+  let daySel = document.getElementById('10');
+  daySel.classList.add('circle');
 }
 
 const addUserEvent = (e, modal) => {
@@ -84,18 +86,47 @@ const addUserEvent = (e, modal) => {
     title: formInputs[2].value,
     location: formInputs[3].value,
   };
-  if (!userEvent.startEven && !userEvent.endEvent) {
-    console.log('please enter a valid date');
-    let warn = document.querySelector('warn');
-    warn.textContent = 'Please enter a valid';
-    warn.classList.add('redColor');
-    return;
-  } else {
-    userEventsArray.push(userEvent);
-    // dataSave();
-    console.log(userEventsArray);
+
+  const allInputs = document.querySelectorAll('.redColor', '.fontSmall');
+  allInputs.forEach((input) => {
+    input.textContent = '';
+  });
+
+  if (!userEvent.startEvent) {
+    let errorParagraph = document.querySelector('#event-start ~ p');
+    errorParagraph.textContent = 'Please enter a valid date';
+  }
+  if (!userEvent.endEvent) {
+    let errorParagraph = document.querySelector('#event-end ~ p');
+    errorParagraph.textContent = 'Please enter a valid date';
+  }
+  if (!userEvent.location) {
+    let errorParagraph = document.querySelector('#event-location ~ p');
+    errorParagraph.textContent = 'Location required';
+  }
+  if (!userEvent.title) {
+    let errorParagraph = document.querySelector('#event-title ~ p');
+    errorParagraph.textContent = 'Title required';
+  }
+
+  // userEventsArray.push(userEvent);
+  if (
+    userEvent.startEvent &&
+    userEvent.endEvent &&
+    userEvent.location &&
+    userEvent.title
+  ) {
     return true;
+  } else {
+    return false;
   }
 };
+
+// document.querySelector('#event-start').addEventListener('change', (ev) => {
+//   if (ev) {
+//     let errorParagraph = document.querySelector('#event-start ~ p');
+//     errorParagraph.textContent = '';
+//   }
+// });
 
 export default addUserEvent;

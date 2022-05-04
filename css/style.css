@@ -22,6 +22,14 @@ body {
   color: red;
 }
 
+.fontSmall {
+  font-size: small;
+}
+
+.m0 {
+  margin: 0;
+}
+
 .header {
   padding: 10px;
   background-color: var(--main-color);
@@ -151,6 +159,13 @@ body {
   font-size: 1.2vh;
   text-align: center;
   margin: 5px;
+}
+
+.circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  color: red;
 }
 
 /* Footer */

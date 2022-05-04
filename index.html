@@ -48,6 +48,7 @@
 
       <section id="calendar" class="calendar">
         <article class="month-wrapper"></article>
+        <div id="circle">.</div>
       </section>
 
       <section id="day-modal" class="day-modal">
@@ -55,7 +56,6 @@
           <button id="back-btn" class="back-btn"><</button>
           <div id="day-schedule" class="day-schedule">10 May</div>
           <button id="new-event" class="new-event">+</button>
-          <p id="warn"></p>
         </header>
         <div class="horas">
           <div id="hour-00" class="hours">
@@ -169,10 +169,12 @@
             <li>
               <label for="event-start">From</label>
               <input id="event-start" type="datetime-local" name="start" />
+              <p class="redColor fontSmall m0"></p>
             </li>
             <li>
               <label for="event-end">To</label>
               <input id="event-end" type="datetime-local" name="end" />
+              <p class="redColor fontSmall m0"></p>
             </li>
             <li>
               <label for="event-title">Event Name</label>
@@ -183,14 +185,17 @@
                 required
                 maxlength="60"
               />
+              <p class="redColor fontSmall m0"></p>
             </li>
             <li>
               <label for="event-location">Location</label>
               <input id="event-location" type="text" name="location" />
+              <p class="redColor fontSmall m0"></p>
             </li>
             <li>
               <label for="event-details">Details</label>
               <textarea id="event-details" name="details"></textarea>
+              <p class="redColor fontSmall m0"></p>
             </li>
             <div class="modal-btns">
               <button data-save-button type="submit" id="save-btn">
