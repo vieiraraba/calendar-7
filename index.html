@@ -13,24 +13,24 @@
     <div class="container">
       <header class="header" id="header">
         <div id="month-display" class="month-display"></div>
-        MAY
         <div>
           <button id="preview-month" class="preview-month"><</button>
-          <select name="year" id="year" class="select-year">
-            <option value="select-year">JANUARY</option>
-            <option value="select-year">FEBRUARY</option>
-            <option value="select-year">MARCH</option>
-            <option value="select-year">APRIL</option>
-            <option value="select-year" selected>MAY</option>
-            <option value="select-year">JUNE</option>
-            <option value="select-year">JULY</option>
-            <option value="select-year">AUGUST</option>
-            <option value="select-year">SEPTEMBER</option>
-            <option value="select-year">OCTOBER</option>
-            <option value="select-year">NOVEMBER</option>
-            <option value="select-year">DECEMBER</option>
+          <select name="year" id="select-month" class="select-month">
+            <option value="JAN">JANUARY</option>
+            <option value="FEB">FEBRUARY</option>
+            <option value="MAR">MARCH</option>
+            <option value="APR">APRIL</option>
+            <option value="MAY">MAY</option>
+            <option value="JUN">JUNE</option>
+            <option value="JUL">JULY</option>
+            <option value="AUG">AUGUST</option>
+            <option value="SEP">SEPTEMBER</option>
+            <option value="OCT">OCTOBER</option>
+            <option value="NOV">NOVEMBER</option>
+            <option value="DEC">DECEMBER</option>
           </select>
-          <button id="next-month" data-modal-target="#modal" class="next-month">
+          <button id="preview-month" class="preview-month">></button>
+          <button id="add-event" data-modal-target="#modal" class="next-month">
             +
           </button>
         </div>
@@ -54,7 +54,7 @@
         <header id="day-header" class="day-header">
           <button id="back-btn" class="back-btn"><</button>
           <div id="day-schedule" class="day-schedule">10 May</div>
-          <button id="new-event" class="new-event">+</button>
+          <button data-modal-target="#modal" id="new-event" class="new-event">+</button>
           <p id="warn"></p>
         </header>
         <div class="horas">
@@ -209,7 +209,7 @@
 
       <div id="overlay"></div>
 
-      <footer class="footer">
+      <footer id="footer" class="footer">
         <div id="last-month" class="last-month footer-content"></div>
         <div id="motivacional" class="motivacional footer-content">
           <p>

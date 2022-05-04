@@ -18,6 +18,14 @@ const day = dateObj.getDay();
 const month = dateObj.getMonth();
 const year = dateObj.getFullYear();
 
+const monthDisplay = document.getElementById('month-display');
+const selectMonth = document.getElementById('select-month').value;
+
+
+document.tittle = selectMonth;
+monthDisplay.innerHTML =document.tittle;
+console.log(document.tittle);
+
 const onLoad = () => {
   const sumDaysOfCurrentMonth = new Date(year, month + 1, 0).getDate();
   const firstDayOfCurrentMonth = new Date(year, month, 1);

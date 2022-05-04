@@ -26,7 +26,7 @@ body {
   padding: 10px;
   background-color: var(--main-color);
   color: var(--background);
-  font-size: 12vw;
+  font-size: 10vw;
   font-family: sans-serif;
   display: flex;
   justify-content: space-around;
@@ -49,7 +49,7 @@ body {
   cursor: pointer;
   font-size: 10px;
   font-weight: bold;
-  padding: 2px 7px;
+  padding:1px 5px;
   text-decoration: none;
 }
 
@@ -70,7 +70,7 @@ body {
   cursor: pointer;
   font-size: 10px;
   font-weight: bold;
-  padding: 2px 7px;
+  padding: 1px 5px;
   text-decoration: none;
 }
 
@@ -86,7 +86,7 @@ body {
   cursor: pointer;
   font-size: 10px;
   font-weight: bold;
-  padding: 2px 7px;
+  padding: 1px 5px;
   text-decoration: none;
 }
 
