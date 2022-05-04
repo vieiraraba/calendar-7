@@ -69,6 +69,7 @@ const onLoad = (month=4) => {
 
 selectMonth.addEventListener('change', function (e) {
   const monthEl = document.querySelector('.month-wrapper');
+  monthEl.replaceChildren() 
   monthDisplay.textContent = this.value;
   onLoad(monthIndexes[e.target.value]);
   });
