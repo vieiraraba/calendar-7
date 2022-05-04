@@ -18,7 +18,6 @@ const day = dateObj.getDay();
 const month = dateObj.getMonth();
 const year = dateObj.getFullYear();
 
-
 const onLoad = () => {
   const sumDaysOfCurrentMonth = new Date(year, month + 1, 0).getDate();
   const firstDayOfCurrentMonth = new Date(year, month, 1);
@@ -53,4 +52,4 @@ const onLoad = () => {
 onLoad();
 
 // event listeners
-document.getElementById('save-btn').addEventListener('click', addUserEvent);
+// document.getElementById('save-btn').addEventListener('click', addUserEvent);
