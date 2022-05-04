@@ -1,28 +1,5 @@
-body {
-    display: flex;
-    margin-top: 50px;
-    justify-content: center;
-    background-color: var(--second-color);
-}
-
-/* Color Palette */
-:root{
-    --main-color: #e66b6b;
-    --second-color:#B7B6C2;
-    --background: #fffafa;
-    --text-color:#000;
-    --active:#053C5E;
-}
-
-.container {
-    width: 770px;
-    background-color: var(--background);
-    border-radius: 15px;
-
-}
-
 /* New Event Modal */
-
+/* ----------------------------------------------------------------*/
 *, *::after, *::before {
     box-sizing: border-box;
 }
@@ -101,6 +78,9 @@ body {
     color: var(--second-color);
 }
 
+
+/* Overlay */
+/* ----------------------------------------------------------------*/
 #overlay {
     position: fixed;
     opacity: 0;
@@ -117,4 +97,4 @@ body {
     opacity: 1;
     pointer-events: all;
 }
-/* ============================================================== */
+/* ----------------------------------------------------------------*/

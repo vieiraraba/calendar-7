@@ -1,6 +1,8 @@
 import getCurrentDay from '../js/events.js';
 import addUserEvent from './modal.js';
 
+// Variables
+// ----------------------------------------------------------------
 const weekdaysIndexes = {
   Monday: 0,
   Tuesday: 1,
@@ -11,14 +13,31 @@ const weekdaysIndexes = {
   Sunday: 6,
 };
 
+const monthIndexes = {
+  JAN: 0,
+  FEB: 1,
+  MAR: 2,
+  APR: 3,
+  MAY: 4,
+  JUN: 5,
+  JUL: 6,
+  AUG: 7,
+  SEP: 8,
+  OCT: 9,
+  NOV: 10,
+  DEC: 11,
+}
+
 const handleDayViewEvents = () => {};
 
 const dateObj = new Date();
 const day = dateObj.getDay();
-const month = dateObj.getMonth();
+let month = dateObj.getMonth();
 const year = dateObj.getFullYear();
+const selectMonth = document.getElementById('select-month');
+const monthDisplay = document.getElementById('month-display');;
 
-const onLoad = () => {
+const onLoad = (month=4) => {
   const sumDaysOfCurrentMonth = new Date(year, month + 1, 0).getDate();
   const firstDayOfCurrentMonth = new Date(year, month, 1);
   const localesOptions = {
@@ -49,7 +68,16 @@ const onLoad = () => {
   }
 };
 
+// Functions
+// ----------------------------------------------------------------
+selectMonth.addEventListener('change', function (e) {
+  const monthEl = document.querySelector('.month-wrapper');
+  monthEl.replaceChildren() 
+  monthDisplay.textContent = this.value;
+  onLoad(monthIndexes[e.target.value]);
+  });
+
 onLoad();
 
-// event listeners
-// document.getElementById('save-btn').addEventListener('click', addUserEvent);
+//event listeners
+//ocument.getElementById('save-btn').addEventListener('click', addUserEvent);

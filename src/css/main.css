@@ -1,5 +1,6 @@
-@import '/css/day-page.css';
-@import '/css/event-modular.css';
+@import './day-page.css';
+@import './event-modular.css';
+@import './reset.css';
 
 body {
   display: flex;
@@ -9,17 +10,20 @@ body {
 }
 
 /* Color Palette */
+/* ----------------------------------------------------------------*/
 :root {
   --main-color: #e66b6b;
   --second-color: #b7b6c2;
   --background: #fffafa;
   --text-color: #000;
   --active: #053c5e;
+  --alert-color: #e43333;
 }
 
 /* Header */
+/* ----------------------------------------------------------------*/
 .redColor {
-  color: red;
+  color: var(--alert-color);
 }
 
 .fontSmall {
@@ -34,7 +38,7 @@ body {
   padding: 10px;
   background-color: var(--main-color);
   color: var(--background);
-  font-size: 12vw;
+  font-size: 10vw;
   font-family: sans-serif;
   display: flex;
   justify-content: space-around;
@@ -49,7 +53,7 @@ body {
 }
 
 /* Header buttons */
-
+/* ----------------------------------------------------------------*/
 .next-month {
   background-color: var(--background);
   border: 2px solid #fffdfd;
@@ -57,7 +61,7 @@ body {
   cursor: pointer;
   font-size: 10px;
   font-weight: bold;
-  padding: 2px 7px;
+  padding:1px 5px;
   text-decoration: none;
 }
 
@@ -71,18 +75,18 @@ body {
   top: 1px;
 }
 
-.select-year {
+.select-month {
   background-color: var(--background);
   border: 2px solid #fffdfd;
   border-radius: 50px;
   cursor: pointer;
   font-size: 10px;
   font-weight: bold;
-  padding: 2px 7px;
+  padding: 1px 5px;
   text-decoration: none;
 }
 
-.select-year:hover {
+.select-month:hover {
   border-color: var(--second-color);
   color: var(--main-color);
 }
@@ -94,7 +98,7 @@ body {
   cursor: pointer;
   font-size: 10px;
   font-weight: bold;
-  padding: 2px 7px;
+  padding: 1px 5px;
   text-decoration: none;
 }
 
@@ -109,12 +113,12 @@ body {
 }
 
 /* Week days */
-
+/* ----------------------------------------------------------------*/
 .week-days {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin: 30px 0 15px 0;
+  margin: 30px 15px 15px 0px;
   background-color: var(--background);
   border-radius: 10px;
   font-size: 15px;
@@ -135,12 +139,12 @@ body {
 }
 
 /* Calendar Days */
-
+/* ----------------------------------------------------------------*/
 .month-wrapper {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
+  margin: 20px;
   background-color: var(--background);
   border-radius: 10px;
   font-size: 10px;
@@ -152,13 +156,15 @@ body {
 }
 
 .month-day-view {
-  border: 1px solid var(--second-color);
+  border: 1px solid var(--active);
   border-radius: 10px;
   background-color: var(--background);
   border-radius: 10px;
-  font-size: 1.2vh;
-  text-align: center;
+  font-size: 2vh;
+  text-align: left;
+  font-weight: bold;
   margin: 5px;
+  padding: 5px;
 }
 
 .circle {
@@ -169,7 +175,7 @@ body {
 }
 
 /* Footer */
-
+/* ----------------------------------------------------------------*/
 .footer {
   display: flex;
   justify-content: space-evenly;
@@ -184,8 +190,8 @@ body {
   font-size: 1.5vh;
 }
 
-/* ============================================== */
-
+/* Content Display */
+/* ----------------------------------------------------------------*/
 .day-modal {
   display: block;
 }
@@ -209,3 +215,4 @@ body {
 .footer {
   display: flex;
 }
+/* ----------------------------------------------------------------*/
