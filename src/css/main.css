@@ -110,7 +110,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin: 30px 0 15px 0;
+  margin: 30px 15px 15px 0px;
   background-color: var(--background);
   border-radius: 10px;
   font-size: 15px;
@@ -136,7 +136,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 15px;
+  margin: 20px;
   background-color: var(--background);
   border-radius: 10px;
   font-size: 10px;
@@ -148,13 +148,15 @@ body {
 }
 
 .month-day-view {
-  border: 1px solid var(--second-color);
+  border: 1px solid var(--active);
   border-radius: 10px;
   background-color: var(--background);
   border-radius: 10px;
-  font-size: 1.2vh;
-  text-align: center;
+  font-size: 2vh;
+  text-align: left;
+  font-weight: bold;
   margin: 5px;
+  padding: 5px;
 }
 
 /* Footer */
