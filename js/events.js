@@ -8,8 +8,7 @@ const getCurrentDay = (e) => {
   const footerEl = document.getElementById('footer');
 
   const dayChosen = e.currentTarget.id;
-  console.log(dayChosen);
-  const month = new Date().toLocaleString('default', { month: 'long' });
+  const month = document.getElementById('select-month').value
   calendarEl.style.display = 'none';
   dayViewEl.style.display = 'block';
   headerEl.style.display = 'none';
