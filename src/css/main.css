@@ -1,5 +1,6 @@
 @import './day-page.css';
 @import './event-modular.css';
+@import './reset.css';
 
 body {
   display: flex;
@@ -66,7 +67,7 @@ body {
   top: 1px;
 }
 
-.select-year {
+.select-month {
   background-color: var(--background);
   border: 2px solid #fffdfd;
   border-radius: 50px;
@@ -77,7 +78,7 @@ body {
   text-decoration: none;
 }
 
-.select-year:hover {
+.select-month:hover {
   border-color: var(--second-color);
   color: var(--main-color);
 }
