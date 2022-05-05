@@ -33,16 +33,3 @@ const switchTheme = (evt) => {
 		document.documentElement.setAttribute("data-theme", "light");
 	}
 };
-
-const switchModeBtn = document.querySelector(".switch-btn");
-switchModeBtn.addEventListener("click", switchTheme, false);
-
-let currentTheme = "dark";
-// currentTheme = localStorage.getItem("theme")
-// 	? localStorage.getItem("theme")
-// 	: null;
-
-if (currentTheme) {
-	document.documentElement.setAttribute("data-theme", currentTheme);
-	switchModeBtn.textContent = currentTheme;
-}
