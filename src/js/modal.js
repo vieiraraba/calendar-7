@@ -7,7 +7,7 @@ const formInputs = document.querySelectorAll('#event-form input');
 const dataSaveBtn = document.querySelectorAll('[data-save-button]');
 const inputFields = document.querySelectorAll('#event-form input');
 const eventDetails = document.getElementById('event-details');
-export const userEventsArray = [
+const userEventsArray = [
   {
     0: [],
     1: [],
@@ -23,7 +23,7 @@ export const userEventsArray = [
     11: []
   }
 ];
-let eventData = {};
+
 
 // Modal Popup
 // ----------------------------------------------------------------
@@ -197,4 +197,4 @@ const addUserEvent = (e, modal) => {
 //   }
 // });
 
-export default addUserEvent;
+export default getMonth;
