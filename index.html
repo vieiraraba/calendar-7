@@ -7,6 +7,7 @@
     <title>Calendar</title>
     <script defer src="./src/js/main.js" type="module"></script>
     <script defer src="./src/js/modal.js" type="module"></script>
+    <script defer src="./src/js/clock.js" type="module"></script>
     <link rel="stylesheet" href="./src/css/main.css" />
   </head>
 
@@ -214,7 +215,13 @@
             <b>– Martin Fowler</b>
           </p>
         </div>
-        <div id="following-month" class="following-month footer-content"></div>
+        <div id="working-clock" class="working-clock footer-content">
+          <div class="clock">
+              <div class="hour"></div>
+              <div class="min"></div>
+              <div class="sec"></div>
+          </div>
+        </div>
       </footer>
     </div>
   </body>
