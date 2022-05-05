@@ -112,6 +112,16 @@ function dataSave(modal) {
   const eventEnd = document.createElement('div');
   eventEnd.classList.add('circle');
   daySelEnd.appendChild(eventEnd);
+
+  let startHourDiv = document.getElementById(`hours-${eventData.startHour}`)
+  const startHourEl = document.createElement('div')
+  startHourEl.classList.add('hora0')
+  startHourDiv.appendChild(startHourEl)
+
+  let endHourDiv = document.getElementById(`hours-${eventData.endHour}`)
+  const endHourEl = document.createElement('div')
+  endHourEl.classList.add('hora0')
+  endHourDiv.appendChild(endHourEl)
 }
 
 const addUserEvent = (e, modal) => {
