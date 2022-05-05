@@ -36,5 +36,3 @@ The calendar planner allows you to switch the planner between different calendar
 ![image](https://user-images.githubusercontent.com/81560312/166894004-5053dc48-4993-49c5-8b74-f1f98f97cd64.png)
 
 
-# Collaborators:
-@all-contributors please add @<rabavieira> for <contributions>
