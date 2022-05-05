@@ -1,4 +1,4 @@
-// Just noticed accessing localStorage is banned from codepen, so disabling saving theme to localStorage
+
 
 const deg = 6;
 const hour = document.querySelector(".hour");
