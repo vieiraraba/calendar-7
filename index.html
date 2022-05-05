@@ -1,24 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calendar</title>
-    <script defer src="./src/js/main.js" type="module"></script>
-    <script defer src="./src/js/modal.js" type="module"></script>
-    <script defer src="./src/js/clock.js" type="module"></script>
-    <link rel="stylesheet" href="./src/css/main.css" />
-  </head>
 
-  <body>
-    <div class="container">
-      <!-- Header -->
-      <header class="header" id="header">
-        <div id="month-display" class="month-display"></div>
-        <div>
-          <button id="preview-month" class="preview-month"><</button>
-          <select name="year" id="select-month" class="select-month">
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header" id="header">
+      <div id="month-display" class="month-display"></div>
+      <div>
+        <button id="preview-month" class="preview-month">
+          <</button> <select name="year" id="select-month" class="select-month">
             <option value="JAN">JANUARY</option>
             <option value="FEB">FEBRUARY</option>
             <option value="MAR">MARCH</option>
@@ -31,206 +21,356 @@
             <option value="OCT">OCTOBER</option>
             <option value="NOV">NOVEMBER</option>
             <option value="DEC">DECEMBER</option>
-          </select>
-          <button id="preview-month" class="preview-month">></button>
-          <button id="add-event" data-modal-target="#modal" class="next-month">
-            +
-          </button>
+            </select>
+            <button id="preview-month" class="preview-month">></button>
+            <button id="add-event" data-modal-target="#modal" class="next-month">
+              +
+            </button>
+      </div>
+    </header>
+    <!-- Week Days Section -->
+    <section id="week-days" class="week-days">
+      <div id="monday" class="days">Monday</div>
+      <div id="tuesday" class="days">Tuesday</div>
+      <div id="wednesday" class="days">Wednesday</div>
+      <div id="thursday" class="days">Thursday</div>
+      <div id="friday" class="days">Friday</div>
+      <div id="saturday" class="days">Saturday</div>
+      <div id="sunday" class="days">Sunday</div>
+    </section>
+    <!-- Month Day Section -->
+    <section id="calendar" class="calendar">
+      <article class="month-wrapper"></article>
+      <aside class="calendar-event-preview-container">
+        <div class="event-preview-header">
+          <h3>To do today:</h3>
         </div>
-      </header>
-      <!-- Week Days Section -->
-      <section id="week-days" class="week-days">
-        <div id="monday" class="days">Monday</div>
-        <div id="tuesday" class="days">Tuesday</div>
-        <div id="wednesday" class="days">Wednesday</div>
-        <div id="thursday" class="days">Thursday</div>
-        <div id="friday" class="days">Friday</div>
-        <div id="saturday" class="days">Saturday</div>
-        <div id="sunday" class="days">Sunday</div>
-      </section>
-      <!-- Month Day Section -->
-      <section id="calendar" class="calendar">
-        <article class="month-wrapper"></article>
-        <aside class="calendar-event-preview-container">
-          <div class="event-preview-header">
-            <h3>To do today:</h3>
-          </div>
-          <p id="preivew-p">something</p>
-        </aside>
-      </section>
-      <!-- Modal Day Section -->
-      <section id="day-modal" class="day-modal">
-        <header id="day-header" class="day-header">
-          <button id="back-btn" class="back-btn"><</button>
-          <div id="day-schedule" class="day-schedule">10 May</div>
-          <button data-modal-target="#modal" id="new-event" class="new-event">
-            +
-          </button>
-        </header>
-        <div class="horas">
-          <div id="hour-00" class="hours">
-            <div class="hour-title"></div>
-            <h4>00:00</h4>
-          </div>
-          <div id="hours-01" class="hours">
-            <div class="hour-title"></div>
-            <h4>01:00</h4>
-          </div>
-          <div id="hours-02" class="hours">
-            <div class="hour-title"></div>
-            <h4>02:00</h4>
-          </div>
-          <div id="hours-03" class="hours">
-            <div class="hour-title"></div>
-            <h4>03:00</h4>
-          </div>
-          <div id="hours-04" class="hours">
-            <div class="hour-title"></div>
-            <h4>04:00</h4>
-          </div>
-          <div id="hours-05" class="hours">
-            <div class="hour-title"></div>
-            <h4>05:00</h4>
-          </div>
-          <div id="hours-06" class="hours">
-            <div class="hour-title"></div>
-            <h4>06:00</h4>
-          </div>
-          <div id="hours-07" class="hours">
-            <div class="hour-title"></div>
-            <h4>07:00</h4>
-          </div>
-          <div id="hours-08" class="hours">
-            <div class="hour-title"></div>
-            <h4>08:00</h4>
-          </div>
-          <div id="hours-09" class="hours">
-            <div class="hour-title"></div>
-            <h4>09:00</h4>
-          </div>
-          <div id="hours-10" class="hours">
-            <div class="hour-title"></div>
-            <h4>10:00</h4>
-          </div>
-          <div id="hours-11" class="hours">
-            <div class="hour-title"></div>
-            <h4>11:00</h4>
-          </div>
-          <div id="hours-12" class="hours">
-            <div class="hour-title"></div>
-            <h4>12:00</h4>
-          </div>
-          <div id="hours-13" class="hours">
-            <div class="hour-title"></div>
-            <h4>13:00</h4>
-          </div>
-          <div id="hours-14" class="hours">
-            <div class="hour-title"></div>
-            <h4>14:00</h4>
-          </div>
-          <div id="hours-15" class="hours">
-            <div class="hour-title"></div>
-            <h4>15:00</h4>
-          </div>
-          <div id="hours-16" class="hours">
-            <div class="hour-title"></div>
-            <h4>16:00</h4>
-          </div>
-          <div id="hours-17" class="hours">
-            <div class="hour-title"></div>
-            <h4>17:00</h4>
-          </div>
-          <div id="hours-18" class="hours">
-            <div class="hour-title"></div>
-            <h4>18:00</h4>
-          </div>
-          <div id="hours-19" class="hours">
-            <div class="hour-title"></div>
-            <h4>19:00</h4>
-          </div>
-          <div id="hours-20" class="hours">
-            <div class="hour-title"></div>
-            <h4>20:00</h4>
-          </div>
-          <div id="hours-21" class="hours">
-            <div class="hour-title"></div>
-            <h4>21:00</h4>
-          </div>
-          <div id="hours-22" class="hours">
-            <div class="hour-title"></div>
-            <h4>22:00</h4>
-          </div>
-          <div id="hours-23" class="hours">
-            <div class="hour-title"></div>
-            <h4>23:00</h4>
-          </div>
-        </div>
-      </section>
-      <!-- Event Modal Section (popup) -->
-      <section id="modal" class="modal">
-        <form id="event-form">
-          <ul>
-            <li>
-              <label for="event-start">From</label>
-              <input id="event-start" type="datetime-local" name="start" />
-              <p class="redColor fontSmall m0"></p>
-            </li>
-            <li>
-              <label for="event-end">To</label>
-              <input id="event-end" type="datetime-local" name="end" />
-              <p class="redColor fontSmall m0"></p>
-            </li>
-            <li>
-              <label for="event-title">Event Name</label>
-              <input
-                id="event-title"
-                type="text"
-                name="title"
-                required
-                maxlength="60"
-              />
-              <p class="redColor fontSmall m0"></p>
-            </li>
-            <li>
-              <label for="event-location">Location</label>
-              <input id="event-location" type="text" name="location" />
-              <p class="redColor fontSmall m0"></p>
-            </li>
-            <li>
-              <label for="event-details">Details</label>
-              <textarea id="event-details" name="details"></textarea>
-              <p class="redColor fontSmall m0"></p>
-            </li>
-            <div class="modal-btns">
-              <button data-save-button type="submit" id="save-btn">
-                Save Event
-              </button>
-              <button data-close-button id="cancle-btn">Cancel Event</button>
-            </div>
-          </ul>
-        </form>
-      </section>
-      <!-- Overlay (blackout the content) -->
-      <div id="overlay"></div>
-      <!-- Footer Section -->
-      <footer id="footer" class="footer">
-        <div id="last-month" class="last-month footer-content"></div>
-        <div id="motivacional" class="motivational footer-content">
-          <p>
-            “Any fool can write code that a computer can understand. Good
-            programmers write code that humans can understand.”
-            <b>– Martin Fowler</b>
-          </p>
-        </div>
-        <!-- Clock -->
-        <div id="working-clock" class="working-clock footer-content">
-          <div class="clock">
-            <div class="hour"></div>
-            <div class="min"></div>
-            <div class="sec"></div>
-          </div>
-        </div>
-      </footer>
+        <p id="preivew-p">something</p>
+      </aside>
+    </section>
+    <!-- Modal Day Section -->
+    <section id="day-modal" class="day-modal">
+      <header id="day-header" class="day-header">
+        <button id="back-btn" class="back-btn">
+          <</button> <div id="day-schedule" class="day-schedule">10 May
+  </div>
+  <button data-modal-target="#modal" id="new-event" class="new-event">
+    +
+  </button>
+  </header>
+  <div class="horas">
+    <div id="hour-00" class="hours">
+      <div class="hour-title"></div>
+      <h4>00:00</h4>
     </div>
-  </body>
+    <div id="hours-01" class="hours">
+      <div class="hour-title"></div>
+      <h4>01:00</h4>
+    </div>
+    <div id="hours-02" class="hours">
+      <div class="hour-title"></div>
+      <h4>02:00</h4>
+    </div>
+    <div id="hours-03" class="hours">
+      <div class="hour-title"></div>
+      <h4>03:00</h4>
+    </div>
+    <div id="hours-04" class="hours">
+      <div class="hour-title"></div>
+      <h4>04:00</h4>
+    </div>
+    <div id="hours-05" class="hours">
+      <div class="hour-title"></div>
+      <h4>05:00</h4>
+    </div>
+    <div id="hours-06" class="hours">
+      <div class="hour-title"></div>
+      <h4>06:00</h4>
+    </div>
+    <div id="hours-07" class="hours">
+      <div class="hour-title"></div>
+      <h4>07:00</h4>
+    </div>
+    <div id="hours-08" class="hours">
+      <div class="hour-title"></div>
+      <h4>08:00</h4>
+    </div>
+    <div id="hours-09" class="hours">
+      <div class="hour-title"></div>
+      <h4>09:00</h4>
+    </div>
+    <div id="hours-10" class="hours">
+      <div class="hour-title"></div>
+      <h4>10:00</h4>
+    </div>
+    <div id="hours-11" class="hours">
+      <div class="hour-title"></div>
+      <h4>11:00</h4>
+    </div>
+    <div id="hours-12" class="hours">
+      <div class="hour-title"></div>
+      <h4>12:00</h4>
+    </div>
+    <div id="hours-13" class="hours">
+      <div class="hour-title"></div>
+      <h4>13:00</h4>
+    </div>
+    <div id="hours-14" class="hours">
+      <div class="hour-title"></div>
+      <h4>14:00</h4>
+    </div>
+    <div id="hours-15" class="hours">
+      <div class="hour-title"></div>
+      <h4>15:00</h4>
+    </div>
+    <div id="hours-16" class="hours">
+      <div class="hour-title"></div>
+      <h4>16:00</h4>
+    </div>
+    <div id="hours-17" class="hours">
+      <div class="hour-title"></div>
+      <h4>17:00</h4>
+    </div>
+    <div id="hours-18" class="hours">
+      <div class="hour-title"></div>
+      <h4>18:00</h4>
+    </div>
+    <div id="hours-19" class="hours">
+      <div class="hour-title"></div>
+      <h4>19:00</h4>
+    </div>
+    <div id="hours-20" class="hours">
+      <div class="hour-title"></div>
+      <h4>20:00</h4>
+    </div>
+    <div id="hours-21" class="hours">
+      <div class="hour-title"></div>
+      <h4>21:00</h4>
+    </div>
+    <div id="hours-22" class="hours">
+      <div class="hour-title"></div>
+      <h4>22:00</h4>
+    </div>
+    <div id="hours-23" class="hours">
+      <div class="hour-title"></div>
+      <h4>23:00</h4>
+    </div>
+  </div>
+  </section>
+  <!-- Event Modal Section (popup) -->
+  <section id="modal" class="modal">
+    <form id="event-form">
+      <ul>
+        <li>
+          <label for="event-start">From</label>
+          <input id="event-start" type="datetime-local" name="start" />
+          <p class="redColor fontSmall m0"></p>
+        </li>
+        <li>
+          <label for="event-end">To</label>
+          <input id="event-end" type="datetime-local" name="end" />
+          <p class="redColor fontSmall m0"></p>
+        </li>
+        <li>
+          <label for="event-title">Event Name</label>
+          <input id="event-title" type="text" name="title" required maxlength="60" />
+          <p class="redColor fontSmall m0"></p>
+        </li>
+        <li>
+          <label for="event-location">Location</label>
+          <input id="event-location" type="text" name="location" />
+          <p class="redColor fontSmall m0"></p>
+        </li>
+        <li>
+          <label for="event-details">Details</label>
+          <textarea id="event-details" name="details"></textarea>
+          <p class="redColor fontSmall m0"></p>
+        </li>
+        <div class="modal-btns">
+          <button data-save-button type="submit" id="save-btn">
+            Save Event
+          </button>
+          <button data-close-button id="cancle-btn">Cancel Event</button>
+        </div>
+      </ul>
+    </form>
+  </section>
+  <!-- Overlay (blackout the content) -->
+  <div id="overlay"></div>
+  <!-- Footer Section -->
+  <footer id="footer" class="footer">
+    <div id="last-month" class="last-month footer-content"></div>
+    <div id="motivacional" class="motivational footer-content">
+      <p>
+        “Any fool can write code that a computer can understand. Good
+        programmers write code that humans can understand.”
+        <b>– Martin Fowler</b>
+      </p>
+    </div>
+    <!-- Clock -->
+    <div id="working-clock" class="working-clock footer-content">
+      <div class="clock">
+        <div class="hour"></div>
+        <div class="min"></div>
+        <div class="sec"></div>
+      </div>
+    </div>
+  </footer>
+  </div>
+  <div id="hours-01" class="hours">
+    <div class="hour-title"></div>
+    <h4>01:00</h4>
+  </div>
+  <div id="hours-02" class="hours">
+    <div class="hour-title"></div>
+    <h4>02:00</h4>
+  </div>
+  <div id="hours-03" class="hours">
+    <div class="hour-title"></div>
+    <h4>03:00</h4>
+  </div>
+  <div id="hours-04" class="hours">
+    <div class="hour-title"></div>
+    <h4>04:00</h4>
+  </div>
+  <div id="hours-05" class="hours">
+    <div class="hour-title"></div>
+    <h4>05:00</h4>
+  </div>
+  <div id="hours-06" class="hours">
+    <div class="hour-title"></div>
+    <h4>06:00</h4>
+  </div>
+  <div id="hours-07" class="hours">
+    <div class="hour-title"></div>
+    <h4>07:00</h4>
+  </div>
+  <div id="hours-08" class="hours">
+    <div class="hour-title"></div>
+    <h4>08:00</h4>
+  </div>
+  <div id="hours-09" class="hours">
+    <div class="hour-title"></div>
+    <h4>09:00</h4>
+  </div>
+  <div id="hours-10" class="hours">
+    <div class="hour-title"></div>
+    <h4>10:00</h4>
+  </div>
+  <div id="hours-11" class="hours">
+    <div class="hour-title"></div>
+    <h4>11:00</h4>
+  </div>
+  <div id="hours-12" class="hours">
+    <div class="hour-title"></div>
+    <h4>12:00</h4>
+  </div>
+  <div id="hours-13" class="hours">
+    <div class="hour-title"></div>
+    <h4>13:00</h4>
+  </div>
+  <div id="hours-14" class="hours">
+    <div class="hour-title"></div>
+    <h4>14:00</h4>
+  </div>
+  <div id="hours-15" class="hours">
+    <div class="hour-title"></div>
+    <h4>15:00</h4>
+  </div>
+  <div id="hours-16" class="hours">
+    <div class="hour-title"></div>
+    <h4>16:00</h4>
+  </div>
+  <div id="hours-17" class="hours">
+    <div class="hour-title"></div>
+    <h4>17:00</h4>
+  </div>
+  <div id="hours-18" class="hours">
+    <div class="hour-title"></div>
+    <h4>18:00</h4>
+  </div>
+  <div id="hours-19" class="hours">
+    <div class="hour-title"></div>
+    <h4>19:00</h4>
+  </div>
+  <div id="hours-20" class="hours">
+    <div class="hour-title"></div>
+    <h4>20:00</h4>
+  </div>
+  <div id="hours-21" class="hours">
+    <div class="hour-title"></div>
+    <h4>21:00</h4>
+  </div>
+  <div id="hours-22" class="hours">
+    <div class="hour-title"></div>
+    <h4>22:00</h4>
+  </div>
+  <div id="hours-23" class="hours">
+    <div class="hour-title"></div>
+    <h4>23:00</h4>
+  </div>
+  </div>
+  </section>
+  <!-- Event Modal Section (popup) -->
+  <section id="modal" class="modal">
+    <form id="event-form">
+      <ul>
+        <li>
+          <label for="event-start">From</label>
+          <input id="event-start" type="datetime-local" name="start" />
+          <p class="redColor fontSmall m0"></p>
+        </li>
+        <li>
+          <label for="event-end">To</label>
+          <input id="event-end" type="datetime-local" name="end" />
+          <p class="redColor fontSmall m0"></p>
+        </li>
+        <li>
+          <label for="event-title">Event Name</label>
+          <input id="event-title" type="text" name="title" required maxlength="60" />
+          <p class="redColor fontSmall m0"></p>
+        </li>
+        <li>
+          <label for="event-location">Location</label>
+          <input id="event-location" type="text" name="location" />
+          <p class="redColor fontSmall m0"></p>
+        </li>
+        <li>
+          <label for="event-details">Details</label>
+          <textarea id="event-details" name="details"></textarea>
+          <p class="redColor fontSmall m0"></p>
+        </li>
+        <div class="modal-btns">
+          <button data-save-button type="submit" id="save-btn">
+            Save Event
+          </button>
+          <button data-close-button id="cancle-btn">Cancel Event</button>
+        </div>
+      </ul>
+    </form>
+  </section>
+  <!-- Overlay (blackout the content) -->
+  <div id="overlay"></div>
+  <!-- Footer Section -->
+  <footer id="footer" class="footer">
+    <div id="last-month" class="last-month footer-content"></div>
+    <div id="motivacional" class="motivacional footer-content">
+      <p>
+        “Any fool can write code that a computer can understand. Good
+        programmers write code that humans can understand.”
+        <b>– Martin Fowler</b>
+      </p>
+    </div>
+    <!-- Clock -->
+    <div id="working-clock" class="working-clock footer-content">
+      <div class="clock">
+        <div class="hour"></div>
+        <div class="min"></div>
+        <div class="sec"></div>
+      </div>
+    </div>
+  </footer>
+  </div>
+</body>
+
 </html>
