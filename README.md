@@ -35,6 +35,12 @@ The calendar planner allows you to switch the planner between different calendar
       - max 60 characters for the tittle
       - choose a hour, day and month
       - and that's it, You are organized !!
+
+# Collaborators:
+* **Sefi Cohen** - (https://github.com/seficohen1) 
+* **Ricardo Vieira** - (https://github.com/vieiraraba) 
+* **Darío Gómez** - (https://github.com/dariogmzfdz) 
+* **Oualid Romli** - (https://github.com/dariogmzfdz) 
       
 ![image](https://user-images.githubusercontent.com/81560312/166894004-5053dc48-4993-49c5-8b74-f1f98f97cd64.png)
 
