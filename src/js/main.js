@@ -95,8 +95,9 @@ function nextMonth() {
   if (nav < 11) {
     nav++;
   } else {
-    return;
+    nav = 0;
   }
+  console.log(nav);
   selectMonth.selectedIndex = nav;
   const monthEl = document.querySelector('.month-wrapper');
   monthEl.replaceChildren()
@@ -110,7 +111,7 @@ function previousMonth() {
   if (nav > 0) {
     nav--;
   } else {
-    return;
+    nav = 11;
   }
   selectMonth.selectedIndex = nav;
   const monthEl = document.querySelector('.month-wrapper');
