@@ -14,6 +14,10 @@ body {
   background-color: var(--second-color);
 }
 
+p {
+  margin: 0;
+}
+
 /* Color Palette */
 /* ----------------------------------------------------------------*/
 :root {
@@ -29,6 +33,14 @@ body {
 /* ----------------------------------------------------------------*/
 .redColor {
   color: var(--alert-color);
+}
+
+.fontSmall {
+  font-size: small;
+}
+
+.m0 {
+  margin: 0;
 }
 
 .header {
@@ -58,7 +70,7 @@ body {
   cursor: pointer;
   font-size: 10px;
   font-weight: bold;
-  padding:1px 5px;
+  padding: 1px 5px;
   text-decoration: none;
 }
 
@@ -161,7 +173,16 @@ body {
   text-align: left;
   font-weight: bold;
   margin: 5px;
+  padding: 20px 5px;
+}
+
+.circle {
+  width: 5px;
+  height: 5px;
+  margin-left: 4px;
   padding: 5px;
+  border-radius: 50%;
+  background-color: red;
 }
 
 /* Footer */

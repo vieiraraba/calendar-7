@@ -8,39 +8,40 @@ const dataSaveBtn = document.querySelectorAll('[data-save-button]');
 const inputFields = document.querySelectorAll('#event-form input');
 const eventDetails = document.getElementById('event-details');
 const userEventsArray = [];
+let eventData = {};
 
-const addUserEvent = (e, modal) => {
-  e.preventDefault();
+// const addUserEvent = (e, modal) => {
+//   e.preventDefault();
 
-  const userEvent = {
-    startEvent: formInputs[0].value,
-    startDay: formInputs[0].value.split('T')[0].split('-')[2],
-    startMonth: formInputs[0].value.split('T')[0].split('-')[1],
-    startYear: formInputs[0].value.split('T')[0].split('-')[0],
-    startHour: formInputs[0].value.split('T').pop().split(':')[0],
-    startMinute: formInputs[0].value.split('T').pop().split(':')[1],
-    endEvent: formInputs[1].value,
-    endDay: formInputs[1].value.split('T')[0].split('-')[2],
-    endMonth: formInputs[1].value.split('T')[0].split('-')[1],
-    endYear: formInputs[1].value.split('T')[0].split('-')[0],
-    endHour: formInputs[1].value.split('T').pop().split(':')[0],
-    endMinute: formInputs[1].value.split('T').pop().split(':')[1],
-    title: formInputs[2].value,
-    location: formInputs[3].value,
-  };
-  if (!userEvent.startEven && !userEvent.endEvent) {
-    console.log('please enter a valid date');
-    let warn = document.querySelector('warn');
-    warn.textContent = 'Please enter a valid';
-    warn.classList.add('redColor');
-    return;
-  } else {
-    userEventsArray.push(userEvent);
-    // dataSave();
-    console.log(userEventsArray);
-    return true;
-  }
-};
+//   const userEvent = {
+//     startEvent: formInputs[0].value,
+//     startDay: formInputs[0].value.split('T')[0].split('-')[2],
+//     startMonth: formInputs[0].value.split('T')[0].split('-')[1],
+//     startYear: formInputs[0].value.split('T')[0].split('-')[0],
+//     startHour: formInputs[0].value.split('T').pop().split(':')[0],
+//     startMinute: formInputs[0].value.split('T').pop().split(':')[1],
+//     endEvent: formInputs[1].value,
+//     endDay: formInputs[1].value.split('T')[0].split('-')[2],
+//     endMonth: formInputs[1].value.split('T')[0].split('-')[1],
+//     endYear: formInputs[1].value.split('T')[0].split('-')[0],
+//     endHour: formInputs[1].value.split('T').pop().split(':')[0],
+//     endMinute: formInputs[1].value.split('T').pop().split(':')[1],
+//     title: formInputs[2].value,
+//     location: formInputs[3].value,
+//   };
+//   if (!userEvent.startEven && !userEvent.endEvent) {
+//     console.log('please enter a valid date');
+//     let warn = document.querySelector('warn');
+//     warn.textContent = 'Please enter a valid';
+//     warn.classList.add('redColor');
+//     return;
+//   } else {
+//     userEventsArray.push(userEvent);
+//     // dataSave();
+//     console.log(userEventsArray);
+//     return true;
+//   }
+// };
 
 // Modal Popup
 // ----------------------------------------------------------------
@@ -98,13 +99,82 @@ function closeModal(modal) {
 
 function dataSave(modal) {
   if (modal == null) return;
-  console.log(modal, 'this is modal');
   modal.classList.remove('active');
   overlay.classList.remove('active');
   eventDetails.value = '';
+
+  let daySel = document.getElementById(Number(eventData.startDay));
+  const eventCon = document.createElement('div');
+  eventCon.classList.add('circle');
+  daySel.appendChild(eventCon);
+
+  let daySelEnd = document.getElementById(Number(eventData.endDay));
+  const eventEnd = document.createElement('div');
+  eventEnd.classList.add('circle');
+  daySelEnd.appendChild(eventEnd);
 }
 
+const addUserEvent = (e, modal) => {
+  e.preventDefault();
 
-// Export function
-// ----------------------------------------------------------------
+  const userEvent = {
+    startEvent: formInputs[0].value,
+    startDay: formInputs[0].value.split('T')[0].split('-')[2],
+    startMonth: formInputs[0].value.split('T')[0].split('-')[1],
+    startYear: formInputs[0].value.split('T')[0].split('-')[0],
+    startHour: formInputs[0].value.split('T').pop().split(':')[0],
+    startMinute: formInputs[0].value.split('T').pop().split(':')[1],
+    endEvent: formInputs[1].value,
+    endDay: formInputs[1].value.split('T')[0].split('-')[2],
+    endMonth: formInputs[1].value.split('T')[0].split('-')[1],
+    endYear: formInputs[1].value.split('T')[0].split('-')[0],
+    endHour: formInputs[1].value.split('T').pop().split(':')[0],
+    endMinute: formInputs[1].value.split('T').pop().split(':')[1],
+    title: formInputs[2].value,
+    location: formInputs[3].value,
+  };
+
+  const allInputs = document.querySelectorAll('.redColor', '.fontSmall');
+  allInputs.forEach((input) => {
+    input.textContent = '';
+  });
+
+  if (!userEvent.startEvent) {
+    let errorParagraph = document.querySelector('#event-start ~ p');
+    errorParagraph.textContent = 'Please enter a valid date';
+  }
+  if (!userEvent.endEvent) {
+    let errorParagraph = document.querySelector('#event-end ~ p');
+    errorParagraph.textContent = 'Please enter a valid date';
+  }
+  if (!userEvent.location) {
+    let errorParagraph = document.querySelector('#event-location ~ p');
+    errorParagraph.textContent = 'Location required';
+  }
+  if (!userEvent.title) {
+    let errorParagraph = document.querySelector('#event-title ~ p');
+    errorParagraph.textContent = 'Title required';
+  }
+
+  // userEventsArray.push(userEvent);
+  if (
+    userEvent.startEvent &&
+    userEvent.endEvent &&
+    userEvent.location &&
+    userEvent.title
+  ) {
+    eventData = userEvent;
+    return true;
+  } else {
+    return false;
+  }
+};
+
+// document.querySelector('#event-start').addEventListener('change', (ev) => {
+//   if (ev) {
+//     let errorParagraph = document.querySelector('#event-start ~ p');
+//     errorParagraph.textContent = '';
+//   }
+// });
+
 export default addUserEvent;
