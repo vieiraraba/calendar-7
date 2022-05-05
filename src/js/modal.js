@@ -7,75 +7,7 @@ const formInputs = document.querySelectorAll('#event-form input');
 const dataSaveBtn = document.querySelectorAll('[data-save-button]');
 const inputFields = document.querySelectorAll('#event-form input');
 const eventDetails = document.getElementById('event-details');
-export const userEventsArray = [{endDay: "11",
-endEvent: "2022-05-11T15:28",
-endHour: "15",
-endMinute: "28",
-endMonth: "05",
-endYear: "2022",
-location: "BARCELONA",
-startDay: "10",
-startEvent: "2022-05-10T15:28",
-startHour: "15",
-startMinute: "28",
-startMonth: "05",
-startYear: "2022",
-title: "BODA DE BRITNEY "}];
 let eventData = {};
-
-// Modal Popup
-// ----------------------------------------------------------------
-openModalButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const modal = document.querySelector(button.dataset.modalTarget);
-    openModal(modal);
-  });
-});
-
-overlay.addEventListener('click', () => {
-  const modals = document.querySelectorAll('.modal.active');
-  modals.forEach((modal) => {
-    closeModal(modal);
-  });
-});
-
-closeModalButtons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const modal = button.closest('.modal');
-    closeModal(modal);
-  });
-});
-
-dataSaveBtn.forEach((button) => {
-  button.addEventListener('click', (e) => {
-    const modal = button.closest('.modal');
-    const validationResult = addUserEvent(e, modal);
-
-    if (validationResult) {
-      dataSave(modal);
-    }
-  });
-});
-
-// Functions
-// ----------------------------------------------------------------
-function openModal(modal) {
-  inputFields;
-  eventDetails;
-  if (modal == null) return;
-  // console.log('modal', modal?.querySelector('form'));
-  modal.querySelector('form').reset();
-  modal.classList.add('active');
-  overlay.classList.add('active');
-}
-
-function closeModal(modal) {
-  if (modal == null) return;
-  modal.classList.remove('active');
-  overlay.classList.remove('active');
-  eventDetails.value = '';
-  inputFields.forEach((input) => (input.value = ''));
-}
 
 const getEvents = (userEventsArray) => {
   userEventsArray.forEach(eventData => {
@@ -83,36 +15,24 @@ const getEvents = (userEventsArray) => {
     const eventCon = document.createElement('div');
     eventCon.classList.add('circle');
     daySel.appendChild(eventCon);
-  
+
     let daySelEnd = document.getElementById(Number(eventData.endDay));
     const eventEnd = document.createElement('div');
     eventEnd.classList.add('circle');
     daySelEnd.appendChild(eventEnd);
-  
+
     let startHourDiv = document.getElementById(`hours-${eventData.startHour}`)
     const startHourEl = document.createElement('div')
     startHourEl.classList.add('hora0')
     startHourDiv.appendChild(startHourEl)
-  
+
     let endHourDiv = document.getElementById(`hours-${eventData.endHour}`)
     const endHourEl = document.createElement('div')
     endHourEl.classList.add('hora0')
     endHourDiv.appendChild(endHourEl)
-  
+
   })
 }
-
-function dataSave(modal) {
-  if (modal == null) return;
-  modal.classList.remove('active');
-  overlay.classList.remove('active');
-  eventDetails.value = '';
-
-  getEvents(userEventsArray)
-
-  console.log(userEventsArray)
-}
-
 
 const addUserEvent = (e, modal) => {
   e.preventDefault();
@@ -171,11 +91,66 @@ const addUserEvent = (e, modal) => {
   }
 };
 
-// document.querySelector('#event-start').addEventListener('change', (ev) => {
-//   if (ev) {
-//     let errorParagraph = document.querySelector('#event-start ~ p');
-//     errorParagraph.textContent = '';
-//   }
-// });
+// Modal Popup
+// ----------------------------------------------------------------
+openModalButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const modal = document.querySelector(button.dataset.modalTarget);
+    openModal(modal);
+  });
+});
+
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active');
+  modals.forEach((modal) => {
+    closeModal(modal);
+  });
+});
+
+closeModalButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal');
+    closeModal(modal);
+  });
+});
+
+dataSaveBtn.forEach((button) => {
+  button.addEventListener('click', (e) => {
+    const modal = button.closest('.modal');
+    const validationResult = addUserEvent(e, modal);
+
+    if (validationResult) {
+      dataSave(modal);
+    }
+  });
+});
+
+// Functions
+// ----------------------------------------------------------------
+function openModal(modal) {
+  inputFields;
+  eventDetails;
+  if (modal == null) return;
+  // console.log('modal', modal?.querySelector('form'));
+  modal.querySelector('form').reset();
+  modal.classList.add('active');
+  overlay.classList.add('active');
+}
+
+function closeModal(modal) {
+  if (modal == null) return;
+  modal.classList.remove('active');
+  overlay.classList.remove('active');
+  eventDetails.value = '';
+  inputFields.forEach((input) => (input.value = ''));
+}
+
+function dataSave(modal) {
+  if (modal == null) return;
+  modal.classList.remove('active');
+  overlay.classList.remove('active');
+  eventDetails.value = '';
+  getEvents(userEventsArray)
+}
 
 export default addUserEvent;

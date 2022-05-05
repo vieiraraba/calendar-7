@@ -177,13 +177,19 @@ p {
   padding: 20px 5px;
 }
 
+.month-day-view:hover{
+  background-color: var(--active);
+  border: 2px solid var(--text-color);
+  opacity: 0.9;
+  color: var(--background);
+}
 .circle {
   width: 5px;
   height: 5px;
   margin-left: 4px;
   padding: 5px;
   border-radius: 50%;
-  background-color: red;
+  background-color: var(--main-color);
 }
 
 /* Footer */

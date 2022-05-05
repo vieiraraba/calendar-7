@@ -20,16 +20,3 @@ const setClock = () => {
 setClock();
 // Update every 1000 ms
 setInterval(setClock, 1000);
-
-const switchTheme = (evt) => {
-	const switchBtn = evt.target;
-	if (switchBtn.textContent.toLowerCase() === "light") {
-		switchBtn.textContent = "dark";
-		// localStorage.setItem("theme", "dark");
-		document.documentElement.setAttribute("data-theme", "dark");
-	} else {
-		switchBtn.textContent = "light";
-		// localStorage.setItem("theme", "light"); //add this
-		document.documentElement.setAttribute("data-theme", "light");
-	}
-};

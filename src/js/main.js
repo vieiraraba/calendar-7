@@ -1,6 +1,6 @@
 import getCurrentDay from '../js/events.js';
 import addUserEvent from './modal.js';
-import userEventsArray from './modal.js'
+import userEventsArray from './modal.js';
 
 // Variables
 // ----------------------------------------------------------------
@@ -37,21 +37,19 @@ let month = dateObj.getMonth();
 const year = dateObj.getFullYear();
 const selectMonth = document.getElementById('select-month');
 const monthDisplay = document.getElementById('month-display');;
+const nextBtn = document.getElementById("next-month");
+const previousBtn = document.getElementById("preview-month");
+let nav = selectMonth.selectedIndex;
 
-<<<<<<< HEAD
 const showEventFromMonthView =(e) => {
   const circle = document.querySelector('.circle')
   const previewContainer = document.querySelector('.calendar-event-preview-container')
-  console.log(e.currentTarget.contains(circle))
   if (e.currentTarget.child) {
     previewContainer.style.dispaly = 'block'
   }
 }
 
 const onLoad = (month=4) => {
-=======
-const onLoad = (month = 4) => {
->>>>>>> changeMonth
   const sumDaysOfCurrentMonth = new Date(year, month + 1, 0).getDate();
   const firstDayOfCurrentMonth = new Date(year, month, 1);
   const localesOptions = {
@@ -83,6 +81,11 @@ const onLoad = (month = 4) => {
   }
 };
 
+// Event Listeners
+// ----------------------------------------------------------------
+previousBtn.addEventListener("click", previousMonth);
+nextBtn.addEventListener("click", nextMonth);
+
 
 // Functions
 // ----------------------------------------------------------------
@@ -93,35 +96,20 @@ selectMonth.addEventListener('change', function (e) {
   onLoad(monthIndexes[e.target.value]);
 });
 
-
-//event listeners
-//ocument.getElementById('save-btn').addEventListener('click', addUserEvent);
-
-
 // Buttons next/previous month
-
-const nextBtn = document.getElementById("next-month");
-const previousBtn = document.getElementById("preview-month");
-
-
-nextBtn.addEventListener("click", nextMonth);
-let nav = selectMonth.selectedIndex;
-
+// ----------------------------------------------------------------
 function nextMonth() {
   if (nav < 11) {
     nav++;
   } else {
     nav = 0;
   }
-  console.log(nav);
   selectMonth.selectedIndex = nav;
   const monthEl = document.querySelector('.month-wrapper');
   monthEl.replaceChildren()
   monthDisplay.textContent = selectMonth.value;
   onLoad(monthIndexes[selectMonth.value]);
 };
-
-previousBtn.addEventListener("click", previousMonth);
 
 function previousMonth() {
   if (nav > 0) {
