@@ -1,5 +1,6 @@
 import getCurrentDay from '../js/events.js';
 import addUserEvent from './modal.js';
+import userEventsArray from './modal.js'
 
 // Variables
 // ----------------------------------------------------------------
@@ -37,6 +38,15 @@ const year = dateObj.getFullYear();
 const selectMonth = document.getElementById('select-month');
 const monthDisplay = document.getElementById('month-display');;
 
+const showEventFromMonthView =(e) => {
+  const circle = document.querySelector('.circle')
+  const previewContainer = document.querySelector('.calendar-event-preview-container')
+  console.log(e.currentTarget.contains(circle))
+  if (e.currentTarget.child) {
+    previewContainer.style.dispaly = 'block'
+  }
+}
+
 const onLoad = (month=4) => {
   const sumDaysOfCurrentMonth = new Date(year, month + 1, 0).getDate();
   const firstDayOfCurrentMonth = new Date(year, month, 1);
@@ -64,9 +74,11 @@ const onLoad = (month=4) => {
       dayEl.appendChild(pEl);
       dayEl.id = i - firstDayindex;
       dayEl.addEventListener('click', getCurrentDay);
+      dayEl.addEventListener('mouseover', showEventFromMonthView)
     }
   }
 };
+
 
 // Functions
 // ----------------------------------------------------------------
