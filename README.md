@@ -13,11 +13,11 @@ MyCal is an easy-to-use daily calendar and planner app that provides you with a 
 The calendar planner allows you to switch the planner between different calendar app views as well as create task lists, reminders, and also a weekly schedule planner to give you a clear overview of your agenda and shared calendar.
 
 # What can you do?:
+
 - Different ways to view your calendar 
-    - Quickly switch between month and day view.
-    -Events from Gmail - Flight, hotel, concert, restaurant reservations, and more are added to your calendar automatically.
-    -Tasks - Create, manage, and view your tasks alongside your events in Calendar
-    -All your calendars in one place.
+- Quickly switch between month and day view.
+- Create, manage, and view your tasks alongside your events in Calendar
+-All your calendars in one place.
 
 
 # Why use MyCal?:
