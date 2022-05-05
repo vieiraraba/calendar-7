@@ -92,7 +92,11 @@ nextBtn.addEventListener("click", nextMonth);
 let nav = selectMonth.selectedIndex;
 
 function nextMonth() {
-  nav++;
+  if (nav < 11) {
+    nav++;
+  } else {
+    return;
+  }
   selectMonth.selectedIndex = nav;
   const monthEl = document.querySelector('.month-wrapper');
   monthEl.replaceChildren()
@@ -103,7 +107,11 @@ function nextMonth() {
 previousBtn.addEventListener("click", previousMonth);
 
 function previousMonth() {
-  nav--;
+  if (nav > 0) {
+    nav--;
+  } else {
+    return;
+  }
   selectMonth.selectedIndex = nav;
   const monthEl = document.querySelector('.month-wrapper');
   monthEl.replaceChildren()
