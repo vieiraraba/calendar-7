@@ -37,7 +37,7 @@ const year = dateObj.getFullYear();
 const selectMonth = document.getElementById('select-month');
 const monthDisplay = document.getElementById('month-display');;
 
-const onLoad = (month=4) => {
+const onLoad = (month = 4) => {
   const sumDaysOfCurrentMonth = new Date(year, month + 1, 0).getDate();
   const firstDayOfCurrentMonth = new Date(year, month, 1);
   const localesOptions = {
@@ -72,12 +72,42 @@ const onLoad = (month=4) => {
 // ----------------------------------------------------------------
 selectMonth.addEventListener('change', function (e) {
   const monthEl = document.querySelector('.month-wrapper');
-  monthEl.replaceChildren() 
+  monthEl.replaceChildren()
   monthDisplay.textContent = this.value;
   onLoad(monthIndexes[e.target.value]);
-  });
+});
 
-onLoad();
 
 //event listeners
 //ocument.getElementById('save-btn').addEventListener('click', addUserEvent);
+
+
+// Buttons next/previous month
+
+const nextBtn = document.getElementById("next-month");
+const previousBtn = document.getElementById("preview-month");
+
+
+nextBtn.addEventListener("click", nextMonth);
+let nav = selectMonth.selectedIndex;
+
+function nextMonth() {
+  nav++;
+  selectMonth.selectedIndex = nav;
+  const monthEl = document.querySelector('.month-wrapper');
+  monthEl.replaceChildren()
+  monthDisplay.textContent = selectMonth.value;
+  onLoad(monthIndexes[selectMonth.value]);
+};
+
+previousBtn.addEventListener("click", previousMonth);
+
+function previousMonth() {
+  nav--;
+  selectMonth.selectedIndex = nav;
+  const monthEl = document.querySelector('.month-wrapper');
+  monthEl.replaceChildren()
+  monthDisplay.textContent = selectMonth.value;
+  onLoad(monthIndexes[selectMonth.value]);
+}
+onLoad();
