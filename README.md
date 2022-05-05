@@ -37,3 +37,4 @@ The calendar planner allows you to switch the planner between different calendar
 
 
 # Collaborators:
+@all-contributors please add @<rabavieira> for <contributions>
