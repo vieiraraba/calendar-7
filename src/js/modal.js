@@ -7,20 +7,22 @@ const formInputs = document.querySelectorAll('#event-form input');
 const dataSaveBtn = document.querySelectorAll('[data-save-button]');
 const inputFields = document.querySelectorAll('#event-form input');
 const eventDetails = document.getElementById('event-details');
-export const userEventsArray = [{endDay: "11",
-endEvent: "2022-05-11T15:28",
-endHour: "15",
-endMinute: "28",
-endMonth: "05",
-endYear: "2022",
-location: "BARCELONA",
-startDay: "10",
-startEvent: "2022-05-10T15:28",
-startHour: "15",
-startMinute: "28",
-startMonth: "05",
-startYear: "2022",
-title: "BODA DE BRITNEY "}];
+export const userEventsArray = [
+  {
+    0: [],
+    1: [],
+    2: [],
+    3: [],
+    4: [],
+    5: [],
+    6: [],
+    7: [],
+    8: [],
+    9: [],
+    10: [],
+    11: []
+  }
+];
 let eventData = {};
 
 // Modal Popup
@@ -59,6 +61,12 @@ dataSaveBtn.forEach((button) => {
 
 // Functions
 // ----------------------------------------------------------------
+const getMonth = (num) =>  {
+  +num
+  return num < 10 ? num.split('0')[1] : num
+  
+}
+
 function openModal(modal) {
   inputFields;
   eventDetails;
@@ -77,12 +85,18 @@ function closeModal(modal) {
   inputFields.forEach((input) => (input.value = ''));
 }
 
-const getEvents = (userEventsArray) => {
-  userEventsArray.forEach(eventData => {
+export const getEvents = (userEventsArray) => {
+  const currentMonth = new Date().getMonth()
+
+  userEventsArray[0][currentMonth].forEach(eventData => {
+  
     let daySel = document.getElementById(Number(eventData.startDay));
+    let pEl = document.createElement('p')
     const eventCon = document.createElement('div');
     eventCon.classList.add('circle');
+    pEl.textContent = eventData.title
     daySel.appendChild(eventCon);
+    daySel.appendChild(pEl)
   
     let daySelEnd = document.getElementById(Number(eventData.endDay));
     const eventEnd = document.createElement('div');
@@ -102,6 +116,8 @@ const getEvents = (userEventsArray) => {
   })
 }
 
+
+
 function dataSave(modal) {
   if (modal == null) return;
   modal.classList.remove('active');
@@ -109,8 +125,6 @@ function dataSave(modal) {
   eventDetails.value = '';
 
   getEvents(userEventsArray)
-
-  console.log(userEventsArray)
 }
 
 
@@ -156,15 +170,20 @@ const addUserEvent = (e, modal) => {
     errorParagraph.textContent = 'Title required';
   }
 
-  // userEventsArray.push(userEvent);
   if (
     userEvent.startEvent &&
     userEvent.endEvent &&
     userEvent.location &&
     userEvent.title
   ) {
-    eventData = userEvent;
-    userEventsArray.push(eventData)
+
+    const eventMonthIndex = parseInt(getMonth(userEvent.startMonth) - 1) 
+    userEventsArray[0][eventMonthIndex].push(userEvent)
+
+    
+    localStorage.setItem('events', JSON.stringify(userEventsArray))
+
+
     return true;
   } else {
     return false;

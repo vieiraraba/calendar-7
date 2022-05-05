@@ -1,5 +1,5 @@
 import getCurrentDay from '../js/events.js';
-import addUserEvent from './modal.js';
+import getEvents from '../js/modal.js'
 import userEventsArray from './modal.js'
 
 // Variables
@@ -48,6 +48,8 @@ const showEventFromMonthView =(e) => {
 }
 
 const onLoad = (month=4) => {
+  const localStorageEvents = JSON.parse(localStorage.getItem('events'))
+  
   const sumDaysOfCurrentMonth = new Date(year, month + 1, 0).getDate();
   const firstDayOfCurrentMonth = new Date(year, month, 1);
   const localesOptions = {
@@ -70,14 +72,19 @@ const onLoad = (month=4) => {
     monthEl.appendChild(dayEl);
 
     if (i > firstDayindex) {
+      
       pEl.textContent = i - firstDayindex;
       dayEl.appendChild(pEl);
       dayEl.id = i - firstDayindex;
       dayEl.addEventListener('click', getCurrentDay);
       dayEl.addEventListener('mouseover', showEventFromMonthView)
+      // let number = dateObj.getMonth()
+      // getEvents(localStorageEvents)
+      console.log(localStorageEvents)
     }
   }
 };
+
 
 
 // Functions
