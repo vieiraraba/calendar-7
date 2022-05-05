@@ -190,6 +190,7 @@ p {
 .footer {
   display: flex;
   justify-content: space-between;
+  vertical-align: middle;
   border-top: 2px solid var(--main-color);
 }
 
@@ -199,6 +200,11 @@ p {
   height: 15vh;
   text-align: center;
   font-size: 1.5vh;
+}
+
+.motivational{
+  padding-top:40px;
+  text-align: center;
 }
 
 /* Content Display */

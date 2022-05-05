@@ -91,7 +91,7 @@
     text-decoration: none;
 }
 
-.hora0{
+.hour0{
     background-color: var(--main-color);
     border-radius: 10px;
     color: var(--background);
@@ -101,16 +101,4 @@
     height: 0.4vh;
     padding: 5px;
 }
-
-.hora1{
-    background-color: var(--main-color);
-    border-radius: 10px;
-    color: var(--background);
-    text-align: left;
-    z-index:0.5;
-    width: 50vh;
-    height: 0.4vh;
-    padding: 5px;
-}
-
 /* ----------------------------------------------------------------*/

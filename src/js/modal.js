@@ -10,39 +10,6 @@ const eventDetails = document.getElementById('event-details');
 const userEventsArray = [];
 let eventData = {};
 
-// const addUserEvent = (e, modal) => {
-//   e.preventDefault();
-
-//   const userEvent = {
-//     startEvent: formInputs[0].value,
-//     startDay: formInputs[0].value.split('T')[0].split('-')[2],
-//     startMonth: formInputs[0].value.split('T')[0].split('-')[1],
-//     startYear: formInputs[0].value.split('T')[0].split('-')[0],
-//     startHour: formInputs[0].value.split('T').pop().split(':')[0],
-//     startMinute: formInputs[0].value.split('T').pop().split(':')[1],
-//     endEvent: formInputs[1].value,
-//     endDay: formInputs[1].value.split('T')[0].split('-')[2],
-//     endMonth: formInputs[1].value.split('T')[0].split('-')[1],
-//     endYear: formInputs[1].value.split('T')[0].split('-')[0],
-//     endHour: formInputs[1].value.split('T').pop().split(':')[0],
-//     endMinute: formInputs[1].value.split('T').pop().split(':')[1],
-//     title: formInputs[2].value,
-//     location: formInputs[3].value,
-//   };
-//   if (!userEvent.startEven && !userEvent.endEvent) {
-//     console.log('please enter a valid date');
-//     let warn = document.querySelector('warn');
-//     warn.textContent = 'Please enter a valid';
-//     warn.classList.add('redColor');
-//     return;
-//   } else {
-//     userEventsArray.push(userEvent);
-//     // dataSave();
-//     console.log(userEventsArray);
-//     return true;
-//   }
-// };
-
 // Modal Popup
 // ----------------------------------------------------------------
 openModalButtons.forEach((button) => {
@@ -115,12 +82,12 @@ function dataSave(modal) {
 
   let startHourDiv = document.getElementById(`hours-${eventData.startHour}`)
   const startHourEl = document.createElement('div')
-  startHourEl.classList.add('hora0')
+  startHourEl.classList.add('hour0')
   startHourDiv.appendChild(startHourEl)
 
   let endHourDiv = document.getElementById(`hours-${eventData.endHour}`)
   const endHourEl = document.createElement('div')
-  endHourEl.classList.add('hora0')
+  endHourEl.classList.add('hour0')
   endHourDiv.appendChild(endHourEl)
 }
 
