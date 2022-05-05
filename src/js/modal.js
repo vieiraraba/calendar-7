@@ -8,6 +8,7 @@ const dataSaveBtn = document.querySelectorAll('[data-save-button]');
 const inputFields = document.querySelectorAll('#event-form input');
 const eventDetails = document.getElementById('event-details');
 const userEventsArray = [];
+let eventData = {};
 
 // const addUserEvent = (e, modal) => {
 //   e.preventDefault();
@@ -98,12 +99,19 @@ function closeModal(modal) {
 
 function dataSave(modal) {
   if (modal == null) return;
-  console.log(modal, 'this is modal');
   modal.classList.remove('active');
   overlay.classList.remove('active');
   eventDetails.value = '';
-  let daySel = document.getElementById('10');
-  daySel.classList.add('circle');
+
+  let daySel = document.getElementById(Number(eventData.startDay));
+  const eventCon = document.createElement('div');
+  eventCon.classList.add('circle');
+  daySel.appendChild(eventCon);
+
+  let daySelEnd = document.getElementById(Number(eventData.endDay));
+  const eventEnd = document.createElement('div');
+  eventEnd.classList.add('circle');
+  daySelEnd.appendChild(eventEnd);
 }
 
 const addUserEvent = (e, modal) => {
@@ -155,6 +163,7 @@ const addUserEvent = (e, modal) => {
     userEvent.location &&
     userEvent.title
   ) {
+    eventData = userEvent;
     return true;
   } else {
     return false;

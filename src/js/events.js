@@ -10,7 +10,7 @@ const getCurrentDay = (e) => {
   const footerEl = document.getElementById('footer');
 
   const dayChosen = e.currentTarget.id;
-  const month = document.getElementById('select-month').value
+  const month = document.getElementById('select-month').value;
   calendarEl.style.display = 'none';
   dayViewEl.style.display = 'block';
   headerEl.style.display = 'none';
@@ -21,7 +21,7 @@ const getCurrentDay = (e) => {
 
 // Event listeners
 // ----------------------------------------------------------------
-returnCalendar.addEventListener ('click', backToCalendar)
+returnCalendar.addEventListener('click', backToCalendar);
 
 // Functions
 // ----------------------------------------------------------------
