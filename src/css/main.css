@@ -8,15 +8,15 @@
 
 /* Body */
 /* ----------------------------------------------------------------*/
+* {
+  margin: 0;
+}
+
 body {
   display: flex;
   margin-top: 50px;
   justify-content: center;
   background-color: var(--second-color);
-}
-
-p {
-  margin: 0;
 }
 
 /* Color Palette */

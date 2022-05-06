@@ -92,7 +92,6 @@ export const getEvents = (userEventsArray) => {
     let daySel = document.getElementById(Number(eventData.startDay));
     let pEl = document.createElement('p')
     const eventCon = document.createElement('div');
-    eventCon.classList.add('circle');
     pEl.textContent = eventData.title
     daySel.appendChild(eventCon);
     daySel.appendChild(pEl)
