@@ -12,7 +12,7 @@
     align-items: center;
     font-family: sans-serif;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 }
@@ -86,12 +86,14 @@
     display:block;
     cursor: pointer;
     border-bottom: 2px solid var(--second-color);
+    color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 3vw;
     font-weight: bold;
     text-decoration: none;
 }
 
-.hora0{
+.hour0{
     background-color: var(--main-color);
     border-radius: 10px;
     color: var(--background);
@@ -102,15 +104,8 @@
     padding: 5px;
 }
 
-.hora1{
-    background-color: var(--main-color);
-    border-radius: 10px;
-    color: var(--background);
-    text-align: left;
-    z-index:0.5;
-    width: 50vh;
-    height: 0.4vh;
-    padding: 5px;
+.event-display{
+    margin-left: 200px;
+    color: var(--active);
 }
-
 /* ----------------------------------------------------------------*/

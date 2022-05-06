@@ -1,12 +1,22 @@
+/* Imports CSS Files */
+/* ----------------------------------------------------------------*/
 @import './day-page.css';
 @import './event-modular.css';
 @import './reset.css';
+@import './clock.css';
+@import './event-preview.css';
 
+/* Body */
+/* ----------------------------------------------------------------*/
 body {
   display: flex;
   margin-top: 50px;
   justify-content: center;
   background-color: var(--second-color);
+}
+
+p {
+  margin: 0;
 }
 
 /* Color Palette */
@@ -24,6 +34,14 @@ body {
 /* ----------------------------------------------------------------*/
 .redColor {
   color: var(--alert-color);
+}
+
+.fontSmall {
+  font-size: small;
+}
+
+.m0 {
+  margin: 0;
 }
 
 .header {
@@ -53,7 +71,7 @@ body {
   cursor: pointer;
   font-size: 10px;
   font-weight: bold;
-  padding:1px 5px;
+  padding: 1px 5px;
   text-decoration: none;
 }
 
@@ -148,7 +166,7 @@ body {
 }
 
 .month-day-view {
-  border: 1px solid var(--active);
+  border: 2px solid var(--active);
   border-radius: 10px;
   background-color: var(--background);
   border-radius: 10px;
@@ -156,14 +174,30 @@ body {
   text-align: left;
   font-weight: bold;
   margin: 5px;
+  padding: 20px 5px;
+}
+
+.month-day-view:hover{
+  background-color: var(--active);
+  border: 2px solid var(--text-color);
+  opacity: 0.9;
+  color: var(--background);
+}
+.circle {
+  width: 5px;
+  height: 5px;
+  margin-left: 4px;
   padding: 5px;
+  border-radius: 50%;
+  background-color: var(--main-color);
 }
 
 /* Footer */
 /* ----------------------------------------------------------------*/
 .footer {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  vertical-align: middle;
   border-top: 2px solid var(--main-color);
 }
 
@@ -173,6 +207,11 @@ body {
   height: 15vh;
   text-align: center;
   font-size: 1.5vh;
+}
+
+.motivational{
+  padding-top:40px;
+  text-align: center;
 }
 
 /* Content Display */
@@ -200,4 +239,5 @@ body {
 .footer {
   display: flex;
 }
+
 /* ----------------------------------------------------------------*/
