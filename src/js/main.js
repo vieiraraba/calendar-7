@@ -41,25 +41,15 @@ const monthDisplay = document.getElementById('month-display');;
 const nextBtn = document.getElementById("next-month");
 const previousBtn = document.getElementById("preview-month");
 let nav = selectMonth.selectedIndex;
-
-// const showEventFromMonthView =(e) => {
-//   const circle = document.querySelector('.circle')
-//   const previewContainer = document.querySelector('.calendar-event-preview-container')
-//   console.log(e.currentTarget.contains(circle))
-//   if (e.currentTarget.child) {
-//     previewContainer.style.dispaly = 'block'
-//   }
-// }
 const getEventFromLocalStorageMonthView = (localStorageEvents, month) => {
- 
+
   localStorageEvents[0][month].forEach(event => {
     const dayEl = document.querySelectorAll('[data-actual-day]')
     const pEl = document.createElement('p')
     pEl.textContent = event.title
-    const startDay = getMonth(event.startDay) 
+    const startDay = getMonth(event.startDay)
     const dayToMark = dayEl[startDay - 1]
     dayToMark.appendChild(pEl)
-    
   })
 }
 
@@ -79,22 +69,19 @@ const onLoad = (month=4) => {
   );
   const firstDayString = dateToString.split(',')[0];
   const firstDayindex = weekdaysIndexes[firstDayString];
-  
   for (let i = 1; i <= firstDayindex + sumDaysOfCurrentMonth; i++) {
-    
     const dayEl = document.createElement('div');
     const pEl = document.createElement('p');
     dayEl.className = 'month-day-view';
     monthEl.appendChild(dayEl);
+
     if (i > firstDayindex) {
-      
       pEl.textContent = i - firstDayindex;
       dayEl.appendChild(pEl);
       dayEl.id = i - firstDayindex;
       dayEl.setAttribute('data-actual-day', true)
       dayEl.addEventListener('click', getCurrentDay);
       // dayEl.addEventListener('mouseover', showEventFromMonthView)
-     
     }
   }
   getEventFromLocalStorageMonthView(localStorageEvents, month)

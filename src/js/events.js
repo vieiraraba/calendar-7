@@ -11,21 +11,18 @@ const getCurrentDay = (e) => {
   const headerEl = document.getElementById('header');
   const weekDays = document.getElementById('week-days');
   const footerEl = document.getElementById('footer');
-
   const dayChosen = e.currentTarget.id;
   const month = document.getElementById('select-month').value;
-  
+
   localStorageEvents.forEach(event => {
-    console.log(event)
-   const monthEvents = event[monthIndexes[month]]
-   monthEvents.forEach(event => {
+    const monthEvents = event[monthIndexes[month]]
+    monthEvents.forEach(event => {
     const hourEl = document.getElementById(`hours-${event.startHour}`)
     const h4El = document.createElement('h4')
     h4El.classList.add('event-display')
     h4El.textContent = event.title
     hourEl.appendChild(h4El)
-   })
-   
+  })
   })
   calendarEl.style.display = 'none';
   dayViewEl.style.display = 'block';

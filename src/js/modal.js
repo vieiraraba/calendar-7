@@ -64,7 +64,6 @@ dataSaveBtn.forEach((button) => {
 const getMonth = (num) =>  {
   +num
   return num < 10 ? num.split('0')[1] : num
-  
 }
 
 function openModal(modal) {
@@ -89,7 +88,7 @@ export const getEvents = (userEventsArray) => {
   const currentMonth = new Date().getMonth()
 
   userEventsArray[0][currentMonth].forEach(eventData => {
-  
+
     let daySel = document.getElementById(Number(eventData.startDay));
     let pEl = document.createElement('p')
     const eventCon = document.createElement('div');
@@ -97,7 +96,7 @@ export const getEvents = (userEventsArray) => {
     pEl.textContent = eventData.title
     daySel.appendChild(eventCon);
     daySel.appendChild(pEl)
-  
+
     let daySelEnd = document.getElementById(Number(eventData.endDay));
     const eventEnd = document.createElement('div');
     eventEnd.classList.add('circle');
@@ -112,7 +111,7 @@ export const getEvents = (userEventsArray) => {
     const endHourEl = document.createElement('div')
     endHourEl.classList.add('hora0')
     endHourDiv.appendChild(endHourEl)
-  
+
   })
 }
 
@@ -176,10 +175,10 @@ const addUserEvent = (e, modal) => {
     userEvent.title
   ) {
 
-    const eventMonthIndex = parseInt(getMonth(userEvent.startMonth) - 1) 
+    const eventMonthIndex = parseInt(getMonth(userEvent.startMonth) - 1)
     userEventsArray[0][eventMonthIndex].push(userEvent)
 
-    
+
     localStorage.setItem('events', JSON.stringify(userEventsArray))
 
 
