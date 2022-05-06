@@ -14,7 +14,7 @@ The calendar planner allows you to switch the planner between different calendar
 
 # What can you do?:
 
-- Different ways to view your calendar 
+- Different ways to view your calendar
 - Quickly switch between month and day view.
 - Create, manage, and view your tasks alongside your events in Calendar
 -All your calendars in one place.
@@ -39,7 +39,7 @@ The calendar planner allows you to switch the planner between different calendar
 ![image](https://user-images.githubusercontent.com/81560312/166894004-5053dc48-4993-49c5-8b74-f1f98f97cd64.png)
 
 # Collaborators:
-* **Sefi Cohen** - (https://github.com/seficohen1) 
-* **Ricardo Vieira** - (https://github.com/vieiraraba) 
-* **Darío Gómez** - (https://github.com/dariogmzfdz) 
-* **Oualid Romli** - (https://github.com/dariogmzfdz) 
+* **Sefi Cohen** - (https://github.com/seficohen1)
+* **Ricardo Vieira** - (https://github.com/vieiraraba)
+* **Darío Gómez** - (https://github.com/dariogmzfdz)
+* **Oualid Romli** - (https://github.com/Oualidromli)
